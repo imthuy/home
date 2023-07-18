@@ -58,25 +58,48 @@
 								<p>Next, I explored the insights through two distinct avenues: continuing the analysis within Jupyter or exporting the database to Power BI.</p>
 								<h3>Data Analysis and Visualization on Jupyter Lab</h3>
 								<p><span class="image main"><img src="images/1.1.gif" alt="" /></span></p>
-								<p>
-								  <details>
-									<summary style="font-size: 15px; font-style: italic; color:#4d81f1">Jupyter Lab: View Code</summary>
-									<span class="iframe-container">
-									  <iframe width="100%" height="400" src="images/111.html"></iframe>
-									</span>
-								  </details>
-								</p>
+								<ul class="icons alt actions stacked">
+									<li>
+										<a id="code-button-1" class="button primary small">View Code</a>
+										<span class="iframe-container">
+											<iframe id="iframe-1" width="100%" height="400" src="images/111.html" style="display: none;"></iframe>
+										</span>
+									</li>
+								</ul>
 								
 								<h3>Connecting database to Power BI</h3>
 								<p><span class="image main"><img src="images/1.2.gif" alt="" /></span></p>
-								<p>
-									<details>
-									<summary style="font-size: 15px; font-style: italic; color:#4d81f1">Power BI: My Complete Dashboard</summary>
-									<span class="iframe-container">
-									  <iframe width="100%" height="400" src="https://app.powerbi.com/view?r=eyJrIjoiYzhjYjE4OTQtMzBjMi00YWRlLThiYjMtMjU4M2M5YjM0MjAyIiwidCI6IjM3YTlhYzJmLTA5NjgtNGMyNy1hMDU2LTQ4ZDQ1ZTY0ODUyYyIsImMiOjEwfQ%3D%3D" frameborder="0" allowFullScreen="true"></iframe>
-									</span>
-								</details>
-								</p>
+								<ul class="icons alt actions stacked">
+									<li>
+										<a id="code-button-2" class="button primary small">View Dashboard</a>
+										<span class="iframe-container">
+											<iframe id="iframe-2" width="100%" height="400" src="https://app.powerbi.com/view?r=eyJrIjoiYzhjYjE4OTQtMzBjMi00YWRlLThiYjMtMjU4M2M5YjM0MjAyIiwidCI6IjM3YTlhYzJmLTA5NjgtNGMyNy1hMDU2LTQ4ZDQ1ZTY0ODUyYyIsImMiOjEwfQ%3D%3D" style="display: none;"></iframe>
+										</span>
+									</li>
+								</ul>
+								
+								<script>
+									var button1 = document.getElementById("code-button-1");
+									var iframe1 = document.getElementById("iframe-1");
+									button1.addEventListener("click", function() {
+										if (iframe1.style.display === "none") {
+											iframe1.style.display = "block";
+										} else {
+											iframe1.style.display = "none";
+										}
+									});
+								
+									var button2 = document.getElementById("code-button-2");
+									var iframe2 = document.getElementById("iframe-2");
+									button2.addEventListener("click", function() {
+										if (iframe2.style.display === "none") {
+											iframe2.style.display = "block";
+										} else {
+											iframe2.style.display = "none";
+										}
+									});
+								</script>
+								
 								<br />
 								<h3>Key Insights:</h3>
 								<ul>
