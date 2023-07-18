@@ -1,0 +1,11 @@
+reddit_quartile,threshold,reddit_quartile,average,reddit_quartile,percentage,reddit_quartile,subreddit,frequency
+1.0,359.0,1.0,179.856,1.0,48.0,1,r/offmychest,20
+2.0,679.0,2.0,509.952,2.0,56.8,1,r/AirForce,17
+3.0,1843.0,3.0,1026.416,3.0,36.8,2,r/vanderpumprules,30
+4.0,6369.0,4.0,3880.552,4.0,54.4,2,r/antiwork,20
+,,,,,,3,r/AskReddit,43
+,,,,,,3,r/science,27
+,,,,,,3,r/Presidents,16
+,,,,,,4,r/LifeProTips,40
+,,,,,,4,r/teenagers,20
+,,,,,,4,r/MadeMeSmile,20
