@@ -49,14 +49,19 @@
 									<span class="date">July 2023</span>
 									<h1>How is mental health in today's world?</h1>
 								</header>
+								<h2>Introduction and Objectives</h2>
                                 <p>As we approach <a href="https://www.who.int/campaigns/world-mental-health-day" target="_new">World Mental Health Day</a> on October 10, this project will primarily revolve around the theme of mental health.</p>
-								<p>The COVID-19 crisis and its financial impact have increased the importance of mental health. To explore this topic, I collected related-Reddit posts and Google News articles, which are popular sources of information and discussion. In the Jupyter environment, I purposely advanced SQL queries to examine the social awareness and mental well-being status over the past year. Finally, I utilized the Python Plotly package to visualize analysis outcomes.</p>
+								<p>Using data collected from Reddit threads and Google News, my primary objective is to gain deeper insights into the current status of mental well-being a global scale. Moreover, I expect to make a significant contribution to ongoing efforts to raise mental health awareness and assist those in need.</p>
+								<h2>Data Sources and Methodology</h2>
+								<p>To explore this topic, I collected related-Reddit posts and Google News articles, which are popular sources of information and discussion. In the Jupyter environment, I purposely advanced SQL queries to examine the social awareness and mental well-being status over the past year. Finally, I utilized the Python Plotly package to visualize analysis outcomes.</p>
 								<h2>Data Analysis</h2>								
 								<h3>Alarming Surge in Mental Health Concerns</h3>
-								<span class="image main"><img src="images/M1.png" /></span>						
+								<p>Python's NLTK (Natural Language Toolkit) library was used for sentiment analysis. The polarity score ranges from -1 to +1, where negative values denote negative sentiment, positive values denote positive sentimemt, and 0 for neutral one. 
+Positive values reveal a more positive tone, while negative values mean a more negative tone, as measured by the bias score.</p>
+<span class="image main"><img src="images/M1.png" /></span>						
 								<p>Since last February, there has been a sudden resurgence in posts regarding mental health, amidst the sharp decline in positive attitudes towards them, necessitating prompt awareness and actions to tackle the possible detrimental effects on people's psychological well-being and social functioning. It serves as a warning flag for policymakers and stakeholders to promptly enact countermeasures against any negative repercussions.</p>								
 								<span class="image main"><img src="images/M2.png" alt="" /></span>					
-								<p>Reddit and Google News have very different sentiments and biases, as shown in the graph. Intriguing discrepancies in the findings are revealed, which provide insight into the nature of these platforms and their influence on public opinion.</p>
+								<p>My analysis revealed distinct sentiment and bias patterns on Reddit and Google News, reflecting the varied nature of these platforms and their influence on public opinion.</p>
 								<h3>Reddit's Supportive Environment</h3>
 								<p>The optimistic trend seen in the Reddit data (avg. polarity: +0.16, bias: +106) implies that the site fosters a helpful and upbeat environment for discussions about mental health wherein content empowers positivity and inspires hope. It highlights the platform's nature, where users freely share personal stories, feelings, and opinions within specific subreddits.</p>
 								<p>On the other hand, top trending titles in favoured subreddits on the matter indicate that mind wellness is not limited to personal health alone but intersects with various aspects of life <strong>r/MadeMeSmile</strong>, work <strong>r/antiwork</strong>, and scientific understanding <strong>r/science</strong>.</p>
@@ -66,6 +71,9 @@
 								</div>
 								<p>Google News, functioning as a news aggregator, shows a slight negative sentiment bias (avg. polarity: -0.03, bias: -2) in which mental wellness subjects are depicted in articles with a more critical or problem-focused lens than solutions, negatively impacting public perception and understanding of the matter. The need for a more objective and unbiased perspective on its news is noted. Moreover, its top engagement from reputable publishers like <strong>NPR</strong>, <strong>CNN</strong>, and <strong>Forbes</strong>, which represent a varied spectrum of opinions, implies its spread as a common topic around the globe today.</p>
 								<h3>Australia and the U.S. lead in mental health awareness</h3>
+												
+								<p>I projected geographical references from scraped data on an interactive map using the SpaCy library. The map shows mental health mentions by area. By evaluating the distribution, I found that Australia and the US had stronger media coverage and public concern for mental health, although with some disparities in participation between areas.</p>
+
 								<div class="iframe-container">
 									<p style="font-size: 10px;  font-weight: bold;">Geography and Mental Health: Exploring the Interactive Map<br />
 									<iframe width="100%" height="400" src="images/M_map.html"></iframe></p>
@@ -78,16 +86,19 @@
 								<strong>The last couple of years</strong> have been challenging due to the COVID-19 pandemic and its far-reaching effects on physical, mental, and social cognition, particularly in <strong>America and Australia</strong>.</p>
 								<p>Rising in <strong>Health Month</strong> campaigns aim to raise awareness and promote the prevention of different health conditions and diseases. For example, November is Movember, and May is Mental Health Awareness Month. Additionally, <strong>February</strong> poses challenges to climate anxiety, notably in the northern hemisphere due to the cold and darkness. It emphasises the need to address the psychological toll of climate change and develop strategies to promote resilience.</p>
 								<p>The rising demand for digital well-being is reflected in online self-help and <strong>LPT requests</strong> (an acronym for r/LifeProTips) on sites like Reddit. It highlights the reliance on online platforms for advice and support, emphasising the need for a healthy balance and mindful use of technology.</p>
-								<p>Despite appearing on top keyword lists, <strong>men’s mental health</strong> is often ignored or shamed by society. Men face a greater risk of suicide than women, but they are more reluctant to ask for help because of gender norms or social racism.</p>
+								<p>More social awareness and assistance are needed for the pressing issue of <strong>men's mental health</strong>, which has long suffered from stigma and insufficient attention. Men face a greater risk of suicide than women, but they are more reluctant to ask for help because of gender norms or social racism.</p>
 								<h2>Deeper Analysis</h2>
 								<p>I persisted in utilising SQL queries with the NTILE function to study deeper the feature of the Reddit community for mental wellness in the modern digital world.</p>
 								<span style="width: 80%; height: 80%;" class="image main" ><img src="images/M4.png"/><img src="images/M5.png"/></span>
 								<p>Reddit offers a diverse range of mental health-focused subreddits, inspirational posts, and discussion forums, showing a vibrant community involved in sharing experiences, seeking advice, and obtaining knowledge on mental health concerns.</p>
 								<h2>Conclusion</h2>
 								<p>Mental well-being is a widespread concern nowadays that we should all care about. Recognising its diverse perspectives is essential to ensure there are no biased norms or stereotypes. Technology, climate change, social isolation, work conditions, and cultural identity pose different influences on human emotional resilience and the empowering journey of self-help. Ultimately, this is a complex issue needing comprehensive and inclusive efforts to enhance the holistic wellness of the community on a positive path.</p>
-							
+								<h2>Acknowledgments</h2>
+								<p>For making so much good information available to the public, I am extremely grateful to Reddit and Google News. 
+									The superb tools provided by the NLTK, SpaCy, and Plotly libraries are also greatly appreciated; they were critical to the accomplishment of this goal.</p>
+
 							<ul class="icons alt">
-								<li><a  id="primary-button" class="button primary small">View Code</a></li>
+								<li><a  id="primary-button" class="button small">View Code</a></li>
 								<span class="iframe-container">
 								<iframe id="primary-iframe" width="100%" height="300" src="images/mth.html" style="display: none;"></iframe>
 								</span>
@@ -104,7 +115,10 @@
 								</script>
 							</ul>
 						</section>
-						
+						<ul class="actions small">
+							<li><a href="https://github.com/AnalyticsByThuy/projects/blob/main/Mental_Health_723.py" class="button primary small">GitHub</a></li>
+						</ul>
+
 					</div>
 
 				<!-- Footer -->
