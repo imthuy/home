@@ -47,7 +47,7 @@
 							<section class="post">
 								<header class="major">
 									<span class="date">July 2023</span>
-									<h1>Which Analytics Skills Are in High Demand Today?</h1>
+									<h1 class="rainbow-word">Which Analytics Skills Are in High Demand Today?</h1>
 								</header>
 								<h4>Introduction and Objective</h4>
 								<p><span class="image right"><img src="images/1.png" alt="" /></span>Within the scope of this study, my goal is to identify which analytical skills are now in high demand in the labour market. By analysing LinkedIn job postings, I hope to provide job seekers with valuable insights into the skills required for success in analytics careers.</p>
@@ -124,6 +124,22 @@
 								<p>This project employed BeautifulSoup library version 4.11.1 for web scraping, and data visualization was accomplished using Power BI Desktop version 2.119.701.0.</p>
 								<h4>Data Privacy and Ethics</h4>
 								<p>No private or sensitive information was gathered via the web scraping procedure in order to uphold data privacy and conform to LinkedIn's terms of service. This analysis makes use of publicly available data for the express aim of furthering academic study.</p>
+								<a href="#" id="backToTop" class="back-to-top" style="display: none;"><i class="fas fa-angle-double-up"></i></a>
+								<script>
+									// Function to show or hide the Back to Top button based on the scroll position
+									function handleScroll() {
+										const backToTopButton = document.getElementById('backToTop');
+										if (window.scrollY > 200) {
+											backToTopButton.style.display = 'block';
+										} else {
+											backToTopButton.style.display = 'none';
+										}
+									}
+								
+									// Attach an event listener to handle the scroll event
+									window.addEventListener('scroll', handleScroll);
+								</script>
+	
 							</section>
 							<div style="display: flex; justify-content: center; align-items: center;">
 							<ul class="actions small">
@@ -141,8 +157,9 @@
 									<li><a href="https://github.com/AnalyticsByThuy" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
 								</ul>
 							</section>
-						</section>
-					</footer>
+							
+							
+						</footer>
 
 				<!-- Copyright -->
 					<div id="copyright">

@@ -47,7 +47,7 @@
 							<section class="post">
 								<header class="major">
 									<span class="date">July 2023</span>
-									<h1>How is mental health in today's world?</h1>
+									<h1 class="rainbow-word">How is mental health in today's world?</h1>
 								</header>
 								<h4>Introduction and Objectives</h4>
                                 <p>As we approach <a href="https://www.who.int/campaigns/world-mental-health-day" target="_new">World Mental Health Day</a> on October 10, this project will primarily revolve around the theme of mental health.</p>
@@ -114,16 +114,31 @@ Positive values reveal a more positive tone, while negative values mean a more n
 								<h4>Acknowledgments</h4>
 								<p>For making so much good information available to the public, I am extremely grateful to Reddit and Google News. 
 									The superb tools provided by the NLTK, SpaCy, and Plotly libraries are also greatly appreciated; they were critical to the accomplishment of this goal.</p>
-
-					</section>
+							<a href="#" id="backToTop" class="back-to-top" style="display: none;"><i class="fas fa-angle-double-up"></i></a>
+							<script>
+								function handleScroll() {
+									const backToTopButton = document.getElementById('backToTop');
+									if (window.scrollY > 200) {
+										backToTopButton.style.display = 'block';
+									} else {
+										backToTopButton.style.display = 'none';
+									}
+								}
+							
+								window.addEventListener('scroll', handleScroll);
+							</script>
+												
+						</section>
 					<div style="display: flex; justify-content: center; align-items: center;">
 						<ul class="actions small">
 							<li><a href="https://github.com/AnalyticsByThuy/projects/blob/main/Mental_Health_723.py" class="button primary small">GitHub</a></li>
 						</ul>
 					</div>
 				</div>
-
-				<!-- Footer -->
+				
+			
+				
+								<!-- Footer -->
 					<footer id="footer">
 						<section>
 							<ul class="icons alt">
