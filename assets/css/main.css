@@ -95,7 +95,7 @@ input, select, textarea {
 	}
 
 	body {
-		background-color: #1e252d;
+		background-color: none;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -3231,7 +3231,7 @@ input, select, textarea {
 			left: 0;
 			width: 100%;
 			height: 100%;
-			background-color: #212931;
+			background-color: none;
 			background-image: url("images/overlay.png"), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("images/bg.gif");
 			background-size: auto,								auto,														100% auto;
 			background-position: center,								center,														top center;
@@ -4793,3 +4793,4 @@ a.logo img:hover {
 	transform: rotate(360deg);
 	transition: transform 0.5s ease;
 }
+
