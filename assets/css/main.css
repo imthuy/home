@@ -3724,7 +3724,7 @@ input, select, textarea {
 				}
 
 					#nav ul.links li.active a {
-						color: #1e252d;
+						color: #1e252d ;
 					}
 
 						#nav ul.links li.active a:hover {
@@ -4696,11 +4696,9 @@ input, select, textarea {
     position: fixed;
     bottom: 10px;
     right: 10px;
-    background-color: transparent;
+    background-color: none;
     color: #b4b4b4;
-    padding: 10px;
 	font-size: 20px;
-    border-radius: 50%; 
     transition: background-color 0.3s;
 }
 
@@ -4760,3 +4758,38 @@ input, select, textarea {
 	100% { color: rgb(173, 13, 212); } /* Purple */
 }
 
+.bling-border::before {
+	z-index: -1; /* Move the pseudo-element below the button text */
+	background-image: linear-gradient(45deg, #ffcc00, #ff00cc, #00ccff, #cc00ff);
+	background-size: 400% 400%;
+	animation: bling 4s linear infinite;
+  }
+  
+  /* Define the animation */
+  @keyframes bling {
+	0% {
+	  background-position: 0% 50%;
+	}
+	100% {
+	  background-position: 100% 50%;
+	}
+  }
+
+
+  @keyframes arrowRotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .scrolly {
+    animation: arrowRotate 1.5s infinite;
+  }
+
+a.logo img:hover {
+	transform: rotate(360deg);
+	transition: transform 0.5s ease;
+}
