@@ -256,3 +256,25 @@
 		}
 
 })(jQuery);
+
+
+    function refreshIframe() {
+        var now = new Date();
+        var targetTime = new Date(now);
+        targetTime.setHours(24, 30, 0, 0); // Replace 10 with the desired hour and 30 with the desired minute for refresh
+
+        var timeUntilRefresh = targetTime - now;
+        if (timeUntilRefresh < 0) {
+            // The target time has already passed today, schedule for tomorrow
+            timeUntilRefresh += 24 * 60 * 60 * 1000;
+        }
+
+        setTimeout(function() {
+            var iframe = document.getElementById('tracker'); // Replace 'tracker' with the actual ID of your iframe
+            iframe.src = iframe.src; // Refresh the iframe content
+            refreshIframe(); // Schedule the next refresh
+        }, timeUntilRefresh);
+    }
+
+    refreshIframe(); // Start the refresh cycle
+
