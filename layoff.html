@@ -70,10 +70,23 @@
                     <!-- Post -->
                         <section class="post">
                             <header class="major">
-                                <span class="date">July 2023</span>
-                                <h1 class="rainbow-word">How is mental health in today's world?</h1>
+                                <span class="date">August 2023</span>
+                                <h1 class="rainbow-word" >Global Layoffs &<br />Tech Stock Performance</h1>
                             </header>
-                            <h2>Layoffs Tracker</h2>
+                            <h3>Introduction and Objectives</h3>
+                                <p>Amidst the formidable repercussions of the Covid-19 crisis on global economies, numerous industries have grappled with the daunting challenge of mass layoffs. In light of this crucial juncture, this study examines the correlation between global unemployment trends and the fluctuating stock prices of tech giants. Our objective is to contribute to the corpus of knowledge and empower stakeholders to make well-informed decisions that influence the future of the global economy.</p>
+                            <h3>Methodology</h3>
+                                <p>Two primary data sources were utilised for this analysis:</p>
+                                <ul>
+                                    <li>Airtable and Power Query: We gathered layoff-related news coverage, updating its weekly to capture the latest developments.</li>
+                                    <li>Fredapi: We obtained closing prices of tech stocks for the post-COVID-19 period to assess the recovery and growth of the tech sector amidst the pandemic's aftermath.</li>
+                                </ul>
+                                <p>Our analysis involved Python methods in the Jupyter environment for data processing and visualization. Additionally, we conducted web queries to acquire vital information about layoffs in the tech industry.</p>
+                            <h3>Data Integrity</h3>
+                                <p>Several measures, including data validation and cross-referencing, were implemented to ensure the accuracy of data. We thoroughly cleansed and preprocessed the data to reduce the number of errors and inconsistencies. All possible outliers and inconsistencies were thoroughly examined and resolved.</p>
+                            <h3>Data Visualization</h3>
+                                <p>Before and after the COVID-19 pandemic, we visualised the data to show how layoffs were trending, focusing on the time period beginning in the second quarter of 2022. To comprehend tech stocks' comeback following the epidemic, we visually displayed their closing values over time.</p>
+                            <h2>Layoffs on Global Economy</h2>
                                 <span>
                                     <style>
                                         #tab_container_471 {
@@ -84,7 +97,7 @@
                                             border-radius: 15px;
                                             border: 2px solid transparent;
                                             padding: 7px;
-                                            background-color: rgba(48, 38, 38, 0.767);
+                                            background-color: rgb(48, 47, 47);
                                             position: relative;
                                             background-size: 400% 400%;
                                         
@@ -95,7 +108,7 @@
                                             margin-top: 0px;
                                             border-radius: 20px; 
                                         }
-    
+
                                         .img-container {
                                             height: 450px;
                                             padding: 0;
@@ -257,44 +270,48 @@
                                         </div>
                                     </div>
                                 </span>
+                                <p></p>
+                                <p>The data clearly illustrates a striking contrast in the layoff trends before and after the Covid-19 outbreak, with the most dramatic change occurring in Q2/2022. The rate spiked in the first month of 2023, then gradually decreased thereafter, but the overall trend is still worrying. The crisis has had a widespread impact on various industries, particularly in retail, consumer, and technology. Businesses should actively monitor the situation and adjust their planning techniques to handle this protracted crisis.</p>
+                                <p>Contributing to these employment cutbacks are a decline in revenue growth, rising interest rates, inflationary pressures, fears of a recession, heightened competition, regulatory issues, and miscalculations of post-pandemic demand.</p>
+                                <p>Our web search for key points regarding tech industry layoffs post-COVID-19 yielded crucial insights. Amidst economic recovery and shifting consumer behaviour, the once-booming tech sector is now experiencing a wave of layoffs and hiring freezes. <a href="https://www.cnn.com/2023/01/22/tech/big-tech-pandemic-hiring-layoffs/index.html">Prominent tech giants like Amazon, Google, Microsoft, and Meta have collectively announced plans to cut more than 50,000 employees in recent months</a>. Various factors contribute to these layoffs, including <a href="https://news.stanford.edu/2022/12/05/explains-recent-tech-layoffs-worried/">slowing revenue growth, rising interest rates, inflation, recession fears, increased competition, regulatory pressures, and misjudgment of post-pandemic demand</a>.</p>
                             <h2>Tech Stocks Performance</h2>
-                            <span>
-                                <div>                   
-                                    <span class="iframe-container">
-                                        <iframe width="100%" height="520" src="images/stock_tech.html" frameborder="0" allowFullScreen="true"></iframe>
-                                    </span>
-                                </div>
-                            </span>
-                            <ul class="icons alt">
-                                <li><a  id="primary-button" class="button small">View Code</a></li>
-                                <span class="iframe-container">
-                                <iframe id="primary-iframe" width="80%" height="300" src="images/stock.html" style="display: none;"></iframe>
+                                <span>
+                                    <div>                   
+                                        <span class="iframe-container">
+                                            <iframe width="100%" height="520" src="images/stock_tech.html" frameborder="0" allowFullScreen="true"></iframe>
+                                        </span>
+                                    </div>
                                 </span>
-                                <script>
-                                    var button = document.getElementById("primary-button");
-                                    var iframe = document.getElementById("primary-iframe");
-                                    button.addEventListener("click", function() {
-                                    if (iframe.style.display === "none") {
-                                        iframe.style.display = "block";
-                                    } else {
-                                        iframe.style.display = "none";
-                                    }
-                                    });
-                                </script>
-                            </ul>
-
-                    
-    
-    
-    
-    
+                                <ul class="icons alt">
+                                    <li><a  id="primary-button" class="button small">View Code</a></li>
+                                    <span class="iframe-container">
+                                    <iframe id="primary-iframe" width="80%" height="300" src="images/stock.html" style="display: none;"></iframe>
+                                    </span>
+                                    <script>
+                                        var button = document.getElementById("primary-button");
+                                        var iframe = document.getElementById("primary-iframe");
+                                        button.addEventListener("click", function() {
+                                        if (iframe.style.display === "none") {
+                                            iframe.style.display = "block";
+                                        } else {
+                                            iframe.style.display = "none";
+                                        }
+                                        });
+                                    </script>
+                                </ul>
+                                <p>Our analysis revealed a notable pattern in the closing prices of tech stocks. After facing a significant drop in January 2023, the tech sector showcased resilience as the prices recovered steadily in subsequent months. The observed surge in closing prices reflects the technology sector's ability to overcome challenges posed by the pandemic, signalling a promising revival of the global economy. Currently, the closing prices have soared to their highest levels, painting a promising outlook for the future prospects of the tech industry.  Investors now have more faith in the market thanks to this upswing.</p>
+                            <h2>Conclusion</h2>
+                                <p>In conclusion, despite the formidable challenges posed by COVID-19's aftermath, there are encouraging signs of positive economic development. Downward trends in global layoffs and uptrends in tech stock prices are both indicators of a rebounding economy. This exemplifies the global industry's adeptness in swiftly adapting and implementing effective financial management strategies in the face of the current economic turmoil.</p>
+                                <p>Buoyed by this momentum, we can anticipate a more stable and optimistic outlook for both the tech industry and the broader economic landscape. Such resilience instils confidence in the industry's capacity to surmount obstacles, nurturing hope for a brighter and promising future ahead.</p>
+                            <h3>Data Privacy and Ethics</h3>
+                                <p>This research endeavour adhered to stringent privacy and ethical standards. To preserve confidentiality, all used data were anonymized and aggregated. We ensured compliance with applicable data protection laws and respected the rights and privacy of individuals whose information was included in the analysis.</p>
+                            <h3>Citations and References</h3>
+                                <ul style="font-style: italic; font-size: smaller;">
+                                    <li>How Big Tech's pandemic bubble burst | CNN Business: <a href="https://www.cnn.com/2023/01/22/tech/big-tech-pandemic-hiring-layoffs/index.html">https://www.cnn.com/2023/01/22/tech/big-tech-pandemic-hiring-layoffs/index.html</a></li>
+                                    <li>What does the wave of tech layoffs tell us about the economy? <a href="https://www.cnn.com/2022/11/07/investing/premarket-stocks-trading/index.html">https://www.cnn.com/2022/11/07/investing/premarket-stocks-trading/index.html</a></li>
+                                    <li>What explains recent tech layoffs, and why should we be worried? <a href="https://news.stanford.edu/2022/12/05/explains-recent-tech-layoffs-worried/">https://news.stanford.edu/2022/12/05/explains-recent-tech-layoffs-worried/</a></li>
+                                </ul>
                     </div>
-                            
-
-
-
-
-
 
 
     <span><a href="#" id="backToTop" class="back-to-top" style="display: none;"><i class="fas fa-angle-double-up"></i></a></span>
