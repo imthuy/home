@@ -278,3 +278,78 @@
 
     refreshIframe(); // Start the refresh cycle
 
+	window.addEventListener('load', function () {
+		// Select the preloader and page content elements
+		const preloader = document.querySelector('.preloader');
+		const pageContent = document.querySelector('#wrapper');
+	  
+		// Function to handle clicking on the preloader
+		function handleClick() {
+		  preloader.style.display = 'none';
+		  pageContent.style.display = 'block'; // Show the page content immediately
+		}
+	  
+		// Hide the preloader when clicked
+		preloader.addEventListener('click', handleClick);
+		preloader.addEventListener('mouseleave', function () {
+		  document.body.style.cursor = 'auto';
+		});
+	  });
+	
+	  window.addEventListener('DOMContentLoaded', function() {
+		let slider = document.querySelector('.slider');
+		let imageLinks = [
+			{ imageUrl: 'images/1.gif', link: 'analytics_skills.html' },
+			{ imageUrl: 'images/2.gif', link: 'mental_health.html' },
+			{ imageUrl: 'images/3.gif', link: 'layoff.html' }
+			// Add more image URLs and links as needed
+		];
+	
+		function createArticle(imageUrl, link) {
+			let article = document.createElement('article');
+			let a = document.createElement('a');
+			let img = document.createElement('img');
+	
+			a.href = link;
+			a.className = 'image fit';
+			img.src = imageUrl;
+			img.alt = '';
+			img.style.borderRadius = '20px';
+			a.appendChild(img);
+			article.appendChild(a);
+			slider.appendChild(article);
+		}
+	
+		function cloneImages() {
+			let clonedArticles = slider.cloneNode(true).children;
+			for (let article of clonedArticles) {
+				slider.appendChild(article);
+			}
+		}
+	
+		// Create initial set of images
+		imageLinks.forEach(function(imageLink) {
+			createArticle(imageLink.imageUrl, imageLink.link);
+		});
+	
+		let numImages = imageLinks.length;
+	
+		function startAutoplay() {
+			slider.classList.add('play');
+		}
+	
+		function stopAutoplay() {
+			slider.classList.remove('play');
+		}
+	
+		// Start autoplay and clone images for infinite loop
+		startAutoplay();
+		cloneImages();
+	
+		// Pause autoplay when mouse enters the slider
+		slider.addEventListener('mouseenter', stopAutoplay);
+	
+		// Resume autoplay when mouse leaves the slider
+		slider.addEventListener('mouseleave', startAutoplay);
+	});
+	
