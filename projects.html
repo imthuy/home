@@ -9,81 +9,178 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			* {
+			  margin: 0;
+			  padding: 0;
+			  box-sizing: border-box;
+			}
+			
+			body {
+			  position: relative;
+			  width: 100%;
+			  height: 100%;
+			  background-color: #000;
+			  font-family: 'Oswald', sans-serif;
+			}
+			
+			h1, h2, h3, h4, h5, h6 {
+			  text-transform: uppercase;
+			  line-height: 0.9;
+			}
+			
+			.header {
+			  h1 {
+				margin-bottom: 3rem;
+				font-size: 10vw;
+				color: #FFF;
+				transition: all 0.85s cubic-bezier(0.65, 0, 0.35, 1);
+			  }
+			  
+			  p {
+				padding-bottom: 2rem;
+				font-weight: 200;
+				font-size: 1.5rem;
+				color: #FFF;
+			  }
+			  
+			  hr { transform-origin: top left; }
+			  
+			  .heading-line-wrapper { overflow: hidden; }
+			}
+			
+			.image-grid {
+			  display: flex;
+			  flex-wrap: wrap;
+			  padding: 4rem 0;
+			  width: 100%;
+			  min-height: 100vh;
+			}
+			
+			.image-card {
+			  position: relative;
+			  display: flex;
+			  align-items: center;
+			  justify-content: center;
+			  margin-bottom: 20vh;
+			  border-radius: 0;
+			  transition: border-radius 0.75s cubic-bezier(0.65, 0, 0.35, 1);
+			  overflow: hidden;
+			  cursor: pointer;
+			  
+			  &.image-portrait {
+				margin-left: 10vw;
+				width: 30vw;
+				height: 40vw;    
+			  }
+			  
+			  &.image-landscape {
+				margin-left: 10vw;
+				width: 40vw;
+				height: 30vw;
+			  }
+			  
+			  &:hover {
+				border-radius: 15rem;
+				
+				.image-header {
+				  opacity: 1;
+				  transform: translate(-50%, -50%) scale(1);
+				}
+			  }
+			  
+			  .image-header, .image-caption {
+				background-color: #0000009a;
+				padding: 15rem;
+				color: #FFF;
+				
+			  }
+			  
+			  .image-header {
+				z-index: 1;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%) scale(1);
+				font-size: 5vw;
+				color: #FFF;
+				text-transform: uppercase;
+				line-height: 1;
+				opacity: 0;
+				transition: all 0.85s cubic-bezier(0.65, 0, 0.35, 1);
+				pointer-events: none;
+			  }
+			  
+			  img {
+				display: block;
+				width: 150%;
+				object-fit: cover;
+			  }
+			}
+		  </style>
+		  
 	</head>
-	<body style="background-repeat: repeat; background-image: url('images/bg.gif');" class="is-preload">
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
+<body style="background-repeat: repeat; background-image: url('images/bg.gif');" class="is-preload">
+	<!-- Wrapper -->
+		<div id="wrapper" class="fade-in">
 
-				<!-- Intro -->
-					<div id="intro">
-						<div class="gif-container" >
-							<img style="height: 70px" src="images/me1.gif" alt="GIF">
-						</div>
-						<h1 class="animated-word">Analytics by Thuy</h1>
-						<p>@ABT</p>
-						<ul class="actions">
-							<li><a href="#header" class="button icon solid solo fa-star scrolly">Continue</a></li>
-						</ul>
+			<!-- Intro -->
+		<div id="intro">
+					<div class="gif-container" >
+						<img style="height: 70px" src="images/me1.gif" alt="GIF">
 					</div>
+					<h1 class="animated-word">Analytics by thuy</h1>
+					<p>@abt</p>
+					<ul class="actions">
+						<li><a href="#nav" class="button icon solid solo fa-star scrolly">Continue</a></li>
+					</ul>
+				</div>
 
 				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo" style="border: none;"><img src="images/logo.png" width="50" height="50" style="border-radius: 30%;"/></a>
-					</header>
+				<header id="header">
+					<a href="index.html" class="logo" style="border: none;"><img src="images/logo.png" width="50" height="50" style="border-radius: 30%;"/></a>
+				</header>
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li><a href="about.html">About</a></li>
-							<li class="active"><a href="projects.html">Projects</a></li>
-							<li><a href="CV.html">CV</a></li>
-							<li><a href="contact.html">Contact</a></li>
-						</ul>
-						<ul class="icons">
-							<li><a href="https://www.linkedin.com/in/tn107/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-							<li><a href="https://github.com/AnalyticsByThuy" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-						</ul>
-					</nav>
+			<!-- Nav -->
+				<nav id="nav" width="100%">
+					<ul class="links">
+						<li><a href="index.html">About</a></li>
+						<li  class="active"><a href="projects.html">Projects</a></li>
+						<li><a href="CV.html">CV</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+					<ul class="icons">
+						<li><a href="https://www.linkedin.com/in/tn107/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a href="https://github.com/AnalyticsByThuy" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+					</ul>
+				</nav>
 
 				<!-- Main -->
-					<div id="main">
+				<div >
 
 
-						<!-- Posts -->
-							<section class="posts">
-								<article>
-									<a href="analytics_skills.html" class="image fit"><img src="images/1.gif" alt="" style="border-radius: 20px;" /></a>
-								</article>
-								<article>
-									<a href="mental_health.html" class="image fit"><img src="images/2.gif" alt="" style="border-radius: 20px;" /></a>
-								</article>
-								<article>
-									<a href="layoff.html" class="image fit"><img src="images/3.gif" alt="" style="border-radius: 20px;" /></a>
-								</article>
-							</section>
-
-						<!-- Footer -->
-							<footer>
-								<div class="pagination">
-									<!--<a href="#" class="previous">Prev</a>-->
-									<!--<a href="#" class="page active">1</a>-->
-								</div>
-							</footer>
+						<section data-scroll-container>
+							
+							<div class="image-grid" data-scroll-section>
+							  <div class="image-card image-portrait " >
+								<h2 class="image-header">Analytics Job Skills</h2>
+								  <a href="analytics_skills.html"><img src="images/1.gif" data-scroll data-scroll-speed="-3"></a>
+							  </div>
+						  
+							  <div class="image-card image-landscape">
+								<h2 class="image-header">Mental Health</h2>
+								<a href="mental_health.html"><img src="images/2.gif" data-scroll data-scroll-speed="-3"></a>
+							</div>
+						  
+							  <div class="image-card image-landscape">
+								<h2 class="image-header">Layyoffs & Tech Stocks</h2>
+								<a href="layoff.html"><img src="images/3.gif" data-scroll data-scroll-speed="-3"></a>
+							</div>
+						</section>
 
 					</div>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<section class="split contact">
-							<section>
-								<ul class="icons alt">
-									<li><a href="https://www.linkedin.com/in/tn107/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
-									<li><a href="https://github.com/AnalyticsByThuy" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</section>
-						</section>
-					</footer>
 
 				<!-- Copyright -->
 					<div id="copyright">

@@ -290,7 +290,7 @@ input, select, textarea {
 	}
 
 	a {
-		color: #0a66c2;
+		color: #000000;
 		border-bottom-color: transparent;
 	}
 
@@ -3630,7 +3630,7 @@ input, select, textarea {
 		}
 
 		#nav ul.icons li a.icon:hover:before {
-			color: #18bfef;
+			color: #07c9ff;
 		}
 
 		#nav ul.icons.alt li .icon:before {
@@ -4525,7 +4525,7 @@ input, select, textarea {
 		}
 
 		#navPanelToggle.alt {
-			background-color: rgba(255, 255, 255, 0.875);
+			background-color: rgb(255, 255, 255);
 			box-shadow: 0 0.125rem 0.75rem 0 rgba(30, 37, 45, 0.25);
 			color: #212931;
 		}

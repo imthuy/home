@@ -281,14 +281,13 @@
 	window.addEventListener('load', function () {
 		// Select the preloader and page content elements
 		const preloader = document.querySelector('.preloader');
-		const pageContent = document.querySelector('#wrapper');
+		const pageContent = document.querySelector('#root');
 	  
-		// Function to handle clicking on the preloader
-		function handleClick() {
-		  preloader.style.display = 'none';
-		  pageContent.style.display = 'block'; // Show the page content immediately
-		}
-	  
+		setTimeout(function () {
+			preloader.style.display = 'none';
+			pageContent.style.display = 'block';
+		  }, 2000);
+		  		   
 		// Hide the preloader when clicked
 		preloader.addEventListener('click', handleClick);
 		preloader.addEventListener('mouseleave', function () {
