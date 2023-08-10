@@ -4808,6 +4808,8 @@ a.logo img:hover {
     justify-content: center;
     align-items: center;
     z-index: 9999;
+	transition: opacity 0.5s ease-in-out; /* Add the transition */
+	opacity: 1;
 }
 
 .preloader img {
@@ -4856,4 +4858,13 @@ a.logo img:hover {
         transform: translateX(-100%) scale(0.9);
         opacity: 1;
     }
+}
+#clock {
+	position: absolute;
+	top: 5%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: calc(50vw - 2.25rem);
+	max-width: 50px;
+	
 }

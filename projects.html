@@ -24,30 +24,14 @@
 			  font-family: 'Oswald', sans-serif;
 			}
 			
-			h1, h2, h3, h4, h5, h6 {
+			h2 {
 			  text-transform: uppercase;
 			  line-height: 0.9;
 			}
 			
-			.header {
-			  h1 {
-				margin-bottom: 3rem;
-				font-size: 10vw;
-				color: #FFF;
-				transition: all 0.85s cubic-bezier(0.65, 0, 0.35, 1);
-			  }
-			  
-			  p {
-				padding-bottom: 2rem;
-				font-weight: 200;
-				font-size: 1.5rem;
-				color: #FFF;
-			  }
-			  
-			  hr { transform-origin: top left; }
-			  
-			  .heading-line-wrapper { overflow: hidden; }
-			}
+			
+			.heading-line-wrapper { overflow: hidden; }
+			
 			
 			.image-grid {
 			  display: flex;
@@ -118,11 +102,223 @@
 			  }
 			}
 		  </style>
-		  
+		<style>
+		@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap");
+
+			:root {
+			  --bg: #000000;
+			  --clr-1: #00c2ff;
+			  --clr-2: #33ff8c;
+			  --clr-3: #ffc640;
+			  --clr-4: #e54cff;
+			
+			  --blur: 1rem;
+			  --fs: clamp(3rem, 8vw, 7rem);
+			  --ls: clamp(-1.75px, -0.25vw, -3.5px);
+			}
+			
+			body {
+			  min-height: 100vh;
+			  display: grid;
+			  place-items: center;
+			  background-color: var(--bg);
+			  color: #fff;
+			  font-family: "Inter", "DM Sans", Arial, sans-serif;
+			}
+			
+			*,
+			*::before,
+			*::after {
+			  font-family: inherit;
+			  box-sizing: border-box;
+			}
+			
+			.content {
+			  text-align: center;
+			}
+			
+			.title {
+			  font-size: var(--fs);
+			  font-weight: 800;
+			  letter-spacing: var(--ls);
+			  position: relative;
+			  overflow: hidden;
+			  background: var(--bg);
+			  margin: 0;
+			}
+			
+			.subtitle {
+			}
+			
+			.aurora {
+			  position: absolute;
+			  top: 0;
+			  left: 0;
+			  width: 100%;
+			  height: 100%;
+			  z-index: 2;
+			  mix-blend-mode: darken;
+			  pointer-events: none;
+			}
+			
+			.aurora__item {
+			  overflow: hidden;
+			  position: absolute;
+			  width: 60vw;
+			  height: 60vw;
+			  background-color: var(--clr-1);
+			  border-radius: 37% 29% 27% 27% / 28% 25% 41% 37%;
+			  filter: blur(var(--blur));
+			  mix-blend-mode: overlay;
+			}
+			
+			.aurora__item:nth-of-type(1) {
+			  top: -50%;
+			  animation: aurora-border 6s ease-in-out infinite,
+				aurora-1 12s ease-in-out infinite alternate;
+			}
+			
+			.aurora__item:nth-of-type(2) {
+			  background-color: var(--clr-3);
+			  right: 0;
+			  top: 0;
+			  animation: aurora-border 6s ease-in-out infinite,
+				aurora-2 12s ease-in-out infinite alternate;
+			}
+			
+			.aurora__item:nth-of-type(3) {
+			  background-color: var(--clr-2);
+			  left: 0;
+			  bottom: 0;
+			  animation: aurora-border 6s ease-in-out infinite,
+				aurora-3 8s ease-in-out infinite alternate;
+			}
+			
+			.aurora__item:nth-of-type(4) {
+			  background-color: var(--clr-4);
+			  right: 0;
+			  bottom: -50%;
+			  animation: aurora-border 6s ease-in-out infinite,
+				aurora-4 24s ease-in-out infinite alternate;
+			}
+			
+			@keyframes aurora-1 {
+			  0% {
+				top: 0;
+				right: 0;
+			  }
+			
+			  50% {
+				top: 100%;
+				right: 75%;
+			  }
+			
+			  75% {
+				top: 100%;
+				right: 25%;
+			  }
+			
+			  100% {
+				top: 0;
+				right: 0;
+			  }
+			}
+			
+			@keyframes aurora-2 {
+			  0% {
+				top: -50%;
+				left: 0%;
+			  }
+			
+			  60% {
+				top: 100%;
+				left: 75%;
+			  }
+			
+			  85% {
+				top: 100%;
+				left: 25%;
+			  }
+			
+			  100% {
+				top: -50%;
+				left: 0%;
+			  }
+			}
+			
+			@keyframes aurora-3 {
+			  0% {
+				bottom: 0;
+				left: 0;
+			  }
+			
+			  40% {
+				bottom: 100%;
+				left: 75%;
+			  }
+			
+			  65% {
+				bottom: 40%;
+				left: 50%;
+			  }
+			
+			  100% {
+				bottom: 0;
+				left: 0;
+			  }
+			}
+			
+			@keyframes aurora-4 {
+			  0% {
+				bottom: -50%;
+				right: 0;
+			  }
+			
+			  50% {
+				bottom: 0%;
+				right: 40%;
+			  }
+			
+			  90% {
+				bottom: 50%;
+				right: 25%;
+			  }
+			
+			  100% {
+				bottom: -50%;
+				right: 0;
+			  }
+			}
+			
+			@keyframes aurora-border {
+			  0% {
+				border-radius: 37% 29% 27% 27% / 28% 25% 41% 37%;
+			  }
+			
+			  25% {
+				border-radius: 47% 29% 39% 49% / 61% 19% 66% 26%;
+			  }
+			
+			  50% {
+				border-radius: 57% 23% 47% 72% / 63% 17% 66% 33%;
+			  }
+			
+			  75% {
+				border-radius: 28% 49% 29% 100% / 93% 20% 64% 25%;
+			  }
+			
+			  100% {
+				border-radius: 37% 29% 27% 27% / 28% 25% 41% 37%;
+			  }
+			}
+			</style>
 	</head>
 
 <body style="background-repeat: repeat; background-image: url('images/bg.gif');" class="is-preload">
-	<!-- Wrapper -->
+	<div class="preloader">
+		<svg width="50px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400"><defs><style type="text/css">@keyframes draw{100%{stroke-dashoffset: 0}}path{animation: draw 2s ease-in-out infinite}</style><clipPath id="hc"><path d="M 191 207 C 162 162 112 54 51 70 C -22 121 143 314 188 356 C 234 303 400 157 352 88 C 324 54 214 171 191 207 Z "/></clipPath></defs><path fill="none" stroke="#DA72B2" stroke-width="44" stroke-linecap="round" stroke-dasharray="3703" stroke-dashoffset="3703" clip-path="url(#hc)" d="M 120 0 C 88 77 -2 154 3 160 C 8 166 182 47 189 57 C 196 67 2 223 7 228 C 12 233 183 98 192 109 C 201 120 24 280 31 289 C 38 298 349 44 356 53 C 363 62 73 310 88 329 C 304 201 387 88 383 85 C 379 82 112 361 121 370 C 130 379 348 162 356 171"></path></svg>
+	</div>
+<!-- Wrapper -->
 		<div id="wrapper" class="fade-in">
 
 			<!-- Intro -->
@@ -130,8 +326,20 @@
 					<div class="gif-container" >
 						<img style="height: 70px" src="images/me1.gif" alt="GIF">
 					</div>
-					<h1 class="animated-word">Analytics by thuy</h1>
-					<p>@abt</p>
+
+					<div class="content">
+						<h1 class="title">Analytics by thuy
+						  <div class="aurora">
+							<div class="aurora__item"></div>
+							<div class="aurora__item"></div>
+							<div class="aurora__item"></div>
+							<div class="aurora__item"></div>
+						  </div>
+						</h1>
+						<p class="subtitle">@abt</p>
+						<br>
+					</div>
+
 					<ul class="actions">
 						<li><a href="#nav" class="button icon solid solo fa-star scrolly">Continue</a></li>
 					</ul>

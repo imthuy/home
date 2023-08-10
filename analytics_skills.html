@@ -1,5 +1,4 @@
 <!DOCTYPE HTML>
-
 <html>
 	<head>
 		<link rel="icon" type="image/png" href="images/logo.png">
@@ -7,172 +6,463 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+eBE6PJUOiqbFZRd4qJkkt+i3+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body style="background-repeat: repeat; background-image: url('images/bg.gif');" class="is-preload">
+		<style>
+					:root {
+			/* General settings */
+			font-size: 11px;
+			--font-primary: 'Ubuntu', sans-serif;
+			font-family: var(--font-primary);
+			/* Colors */
+			--color_light: #fff;
+			--color_dark: #313140;
+			--color_primary: #383aab;
+			--color_primary_shade-one: #aaacff;
+			--color_primary_shade-two: #383881;
+			--color_accent_red: #d1206f;
+			--color_accent_green: #38ab80;
+		}
 
-		<!-- Wrapper -->
-			<div id="wrapper">
-				<div id="intro">
-					<div class="gif-container" >
-						<img style="height: 70px" src="images/me1.gif" alt="GIF">
-					</div>
-					<h1 class="animated-word">Analytics by Thuy</h1>
-						<p>@ABT</p>
-					<ul class="actions">
-						<li><a href="#header" class="button icon solid solo fa-star scrolly">Continue</a></li>
-					</ul>
-				</div>
 
-				<!-- Header -->
-					<header id="header">
-						<a href="projects.html" class="logo" style="border: none;"><img src="images/logo.png" width="50" height="50" style="border-radius: 30%;"/></a>
-					</header>
+		/* General styles */
+		body { 
+			margin: 0;
+		}
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li><a href="index.html">About</a></li>
-							<li class="active"><a href="projects.html">Projects</a></li>
-							<li><a href="CV.html">CV</a></li>
-							<li><a href="contact.html">Contact</a></li>
-						</ul>
-						<ul class="icons">
-							<li><a href="https://www.linkedin.com/in/tn107/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
-							<li><a href="https://github.com/AnalyticsByThuy" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-						</ul>
-					</nav>
+		h1, h2 {
+			text-align: center;
+		}
 
-				<!-- Main -->
-					<div  id="main">
+		.parallax-wrapper {
+			height: 100vh;
+			background: var(--color_dark);
+			overflow-y: auto;
+			overflow-x: hidden;
+			perspective: 10px;
+		}
 
-						<!-- Post -->
-							<section class="post">
-								<header class="major">
-									<span class="date">July 2023</span>
-									<h1 class="rainbow-word">Which Analytics Skills Are in High Demand Today?</h1>
-								</header>
-								<h4>Introduction and Objective</h4>
-								<p><span class="image right"><img src="images/1.png" alt="" /></span>Within the scope of this study, my goal is to identify which analytical skills are now in high demand in the labour market. By analysing LinkedIn job postings, I hope to provide job seekers with valuable insights into the skills required for success in analytics careers.</p>
-								<h4>Methodology</h4>
-								<p>Specifically, I scraped LinkedIn for Data Scientist and Data Analyst job listings using Python and the BeautifulSoup library.
-									I zeroed in on strategic areas in Vietnam and India to find the best job openings. Following this, the data was processed and cleaned before being analysed in the Jupyter Lab.</p>
-								<h2>Analysis</h2>
-								<h4>Data Collection</h4>
-								<p>This investigation relied on information mined from the professional networking site LinkedIn. I gathered data on two overarching role categories: <strong>Data Scientist</strong> and <strong>Data Analyst</strong>. 
-									My scheme is based on fetching a job description, returned by GET method to check skills in demand: <strong>Python</strong>, <strong>Power BI</strong>, <strong>Jupyter</strong>, <strong>SQL</strong>, <strong>Tableau</strong>, <strong>Excel</strong>. Noting that I use publicly accessible LinkedIn data for purely academic and instructional reasons.</p>
-								<p><i>BeautifulSoup</i> is being used to extract data from online job boards. The web pages are retrieved using the <i>requests</i> library, and then information like job positions and necessary abilities are extracted using the <i>soup</i> method.</p>								
-								<h4>Data Integrity</h4>
-								<p>We subjected the collected data to stringent reviews and validation procedures to ensure accuracy and integrity. Any biases caused by site scraping were accounted for, and we dealt with any missing or inconsistent data points appropriately.</p>
-								<h4>Data Visualization</h4>
-								<p>For a comprehensive grasp, I built interactive and aesthetically appealing visualisations in two distinct ways: by continuing the analysis in Jupyter and by exporting the database to Power BI.
-									Multiple graph styles were employed to illustrate the correlation between skill categories, levels of expertise, and the prevalence of job postings.</p>
-								<h3>Jupyter Lab: Code Documentation</h3>
-								<p><span class="image main"><img src="images/1.1.gif" alt="" /></span></p>
-								<ul class="icons alt actions stacked">
-									<li>
-										<a id="code-button-1" class="button small">View Code</a>
-										<span class="iframe-container">
-											<iframe id="iframe-1" width="100%" height="400" src="images/111.html" style="display: none;"></iframe>
-										</span>
-									</li>
-								</ul>
-								<h3>Power BI Dashboard</h3>
-								<p>The results of my project may be explored through a user-friendly interface, provided through Power BI dashboard. This allows to sort job listings according to preferred location, job type, and skill sets. Hovering over visual elements reveals additional details and context.</p>
-								<p><span class="image main"><img src="images/1.2.gif" alt="" /></span></p>
-								<ul class="icons alt actions stacked">
-									<li>
-										<a id="code-button-2" class="button small">View Dashboard</a>
-										<span class="iframe-container">
-											<iframe id="iframe-2" width="100%" height="400" src="https://app.powerbi.com/view?r=eyJrIjoiYzhjYjE4OTQtMzBjMi00YWRlLThiYjMtMjU4M2M5YjM0MjAyIiwidCI6IjM3YTlhYzJmLTA5NjgtNGMyNy1hMDU2LTQ4ZDQ1ZTY0ODUyYyIsImMiOjEwfQ%3D%3D" frameborder="0" allowFullScreen="true" style="display: none;"></iframe>
-										</span>
-									</li>
-								</ul>
-								
-								<script>
-									var button1 = document.getElementById("code-button-1");
-									var iframe1 = document.getElementById("iframe-1");
-									button1.addEventListener("click", function() {
-										if (iframe1.style.display === "none") {
-											iframe1.style.display = "block";
-										} else {
-											iframe1.style.display = "none";
-										}
-									});
-								
-									var button2 = document.getElementById("code-button-2");
-									var iframe2 = document.getElementById("iframe-2");
-									button2.addEventListener("click", function() {
-										if (iframe2.style.display === "none") {
-											iframe2.style.display = "block";
-										} else {
-											iframe2.style.display = "none";
-										}
-									});
-								</script>
-								
-								
-								<h2>Conclusion</h2>
-								
-								<p> The analytics job market is experiencing a staggering 81.05% increase in the number of posts from the current Iek compared to the previous Iek. Notably, Vietnam has outshined India in this trend, with a remarkable upsurge in analytics job opportunities. Delhi has emerged as the city with the highest number of job postings (43.27%) in India, while Ho Chi Minh City takes the lead in Vietnam with 55.75%.</p>
-								
-								<p> In the job market, possessing skills in Python, SQL, and Excel is crucial, particularly for entry-level and mid-senior positions. Additionally, visualization skills such as PoIr BI and Tableau are also preferred. They appeared in around 30 - 45% of job postings, indicating more chances of work opportunities. Specifically:</p>
-								<ul>
-									<li><strong>Data Analysts:</strong> SQL skills are highly sought with 89.25% of job postings emphasizing this requirement. Excel and Python follow closely, with 84.75% and 80.75% respectively, forming a strong skillset combination in this sector.</li>
-									<li><strong>Data Scientists:</strong> On the other hand, Python is required most as an estimated 79.75% of job postings specify it as a must-have skill. Excel ranks second at 64.01%, folloId by SQL at 54.50%.</li>
-								</ul>	
-								<p>Entry-level positions place a stronger emphasis on all skills, underscoring their importance for aspiring analytics professionals starting their careers.</p>
-								<p>It is evident that a strong command of these skills is vital for success in the analytics job market. Professionals aspiring to excel in the analytics field should focus on developing their proficiency in Python, SQL, and Excel, first of all, to remain competitive and capitalize on the growing opportunities in the job market.</p>
-								<h4>Citations and References</h4>
-								<p>This project employed BeautifulSoup library version 4.11.1 for web scraping, and data visualization was accomplished using Power BI Desktop version 2.119.701.0.</p>
-								<h4>Data Privacy and Ethics</h4>
-								<p>No private or sensitive information was gathered via the web scraping procedure in order to uphold data privacy and conform to LinkedIn's terms of service. This analysis makes use of publicly available data for the express aim of furthering academic study.</p>
-								
-								<a href="#" id="backToTop" class="back-to-top" style="display: none;"><i class="fas fa-angle-double-up"></i></a>
-								<script>
-									// Function to show or hide the Back to Top button based on the scroll position
-									function handleScroll() {
-										const backToTopButton = document.getElementById('backToTop');
-										if (window.scrollY > 200) {
-											backToTopButton.style.display = 'block';
-										} else {
-											backToTopButton.style.display = 'none';
-										}
-									}
-								
-									// Attach an event listener to handle the scroll event
-									window.addEventListener('scroll', handleScroll);
-								</script>
+		header {
+			transform-style: preserve-3d;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: clamp(300px, 75vmax, 85%);
+			position: relative;
+			z-index: -1;
+			padding: 0 4rem;
+		}
+
+		header h1 {
+			color: var(--color_light);
+			font-family: var(--font-primary);
+			position: absolute;
+			transform: translateZ(-15px) scale(2.5);
+			top: 0;
+			font-size: clamp(4rem, 6vmax, 6rem);
+			display: flex;
+			flex-direction: column;
+			transform-origin: bottom center;
+			margin-bottom: 0;
+			margin-top: 15vmin;
+		}
+
+		section.story {
+			font-size: 1.1rem;
+			color: var(--color_primary_shade-one);
+			line-height: 1.5;
+			letter-spacing: 1px;
+			background: linear-gradient(180deg, var(--color_dark), var(--color_primary_shade-two));
+			font-family: var(--font-primary);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			z-index: 999999;
+			position: relative;
+			transform: translateZ(0px);
+			flex-direction: column;
+		}
+
+		section.story:before {
+			content: '';
+			display: block;
+			position: absolute;
+			width: 100vw;
+			height: 20vmax;
+			top: -8vw;
+			background-image: url('https://svgshare.com/i/r29.svg');
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+
+		section.story h2 {
+			margin-top: 0;
+			margin-bottom: 4rem;
+			color: #aaacff;
+		}
+		section h3, h4 {
+			color: #aaacff;
+			text-align: left;
+		}
+		section .inner {
+			max-width: 1024px;
+			z-index: 999999;
+			padding: 0;
+			transform-style: preserve-3d;
+			perspective: 10px;
+			perspective-origin: left;
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			row-gap: 2rem;
+			width: calc(100% - 20vw);
+		}
+
+		section .block p {
+			flex-grow: 1;
+			flex-basis: 30ch;
+		}
+
+		section .block {
+			display: flex;
+			column-gap: 2rem;
+			align-items: start;
+			flex-wrap: wrap;
+			row-gap: 2rem;
+			justify-content: space-around;
+		}
+
+		.block > div {
+			flex-grow: 1;
+			flex-basis: 30ch;
+		}
+
+		section p {
+			max-width: 100%;
+			margin: 0;
+		}
+
+		section .inner p:nth-child(1) {
+			margin-top: 0;
+		}
+
+		.parallax-el {
+			width: 100%;
+			background-repeat: no-repeat;
+			background-size: cover;
+			position: absolute;
+			transform-origin: center bottom;
+			z-index: -1;
+		}
+
+		section strong {
+			color: var(--color_light);
+			padding: 0 4px;
+			position: relative;
+			display: inline-flex;
+			align-items: center;
+			text-transform: capitalize;
+			letter-spacing: 3px;
+			font-weight: 600;
+			margin: 0 0.35rem;
+		}
+
+		section strong:after {
+			content: '';
+			display: block;
+			position: absolute;
+			background: var(--color_primary);
+			width: 106%;
+			height: 50%;
+			left: -3%;
+			z-index: -1;
+			transform: rotate(358deg);
+		}
+
+		/* Highlight element */
+		strong[data-style="blue"]:after {
+			background: var(--color_primary);
+		}
+		strong[data-style="red"]:after {
+			background: var(--color_accent_red);
+		}
+		strong[data-style="green"]:after {
+			background: var(--color_accent_green);
+		}
+
+		/* Landscape elements */
+		.parallax-el[data-paralax="4"] {
+			transform: translateZ(-50px) translateY(110vmax) scale(600%);
+		}
+
+		.parallax-el[data-paralax="5"] {
+			transform: translateZ(-20px) translateY(70vmax) scale(300%);
+		}
+
+		.parallax-el[data-paralax="6"] {
+			transform: translateZ(-10px) translateY(60vmax) scale(200%);
+		}
+
+		/* Space bodies elements */
+		.parallax-el[data-paralax="1"] {
+			transform: translateZ(-55px) scale(1200%);
+			top: 0;
+		}
+
+		.parallax-el[data-paralax="2"] {
+			transform: translateZ(-40px) scale(5) rotate(5deg);
+			top: 0;
+		}
+
+		.parallax-el[data-paralax="3"] {
+			transform: translateZ(-65px) scale(4);
+			top: 0;
+		}
+
+		/* Credits */
+		section.credits {
+			background: transparent;
+			z-index: 999999;
+			display: inline-flex;
+			color: var(--color_light);
+			justify-content: center;
+			align-items: center;
+			padding: 1rem;
+		}
+
+		address.credits {
+			font-style: normal;
+			display: flex;
+			flex-direction: column;
+			row-gap: 2rem;
+		}
+
+		address.credits .row {
+			display: flex;
+			flex-direction: column;
+			row-gap: 0.25rem;
+			align-items: center;
+			justify-content: center;
+		}
+
+		address.credits a {
+			color: inherit;
+			transition: 0.3s ease-in-out;
+			text-decoration: none;
+			display: flex;
+			align-items: center;
+		}
+
+		address.credits a:after {
+			content: '';
+			background: url("https://svgshare.com/i/r2k.svg");
+			width: 4rem;
+			height: 4rem;
+			display: inline-flex;
+			position: absolute;
+			right: -2rem;
+			z-index: -1;
+			transform: rotate(358deg);
+			opacity: 0;
+			transition: 0.2s ease-in-out;
+			top: -0.8rem;
+		}
+
+		address.credits a:hover:after {
+			opacity: 1;
+			transition: 0.2s ease-in-out;
+			right: -4rem;
+			z-index: -1;
+		}
+
+		address.credits .job {
+			color: inherit;
+			font-size: 0.75em;
+			font-family: monospace;
+		}
+
+		img.credits-img {
+			position: absolute;
+			bottom: 0;
+			opacity: 0.75;
+		}
+
+		@media (max-width: 480px) {
+			:root {
+				font-size: 9px;
+			}
+		}
+		</style>
 	
-							</section>
-							<div style="display: flex; justify-content: center; align-items: center;">
-							<ul class="actions small">
-								<li><a href="https://github.com/AnalyticsByThuy/projects/blob/main/Analytics_Job_Skill_LinkedIn_2723.py" class="button primary small">GitHub</a></li>
-								<li><a href="https://app.powerbi.com/view?r=eyJrIjoiYzhjYjE4OTQtMzBjMi00YWRlLThiYjMtMjU4M2M5YjM0MjAyIiwidCI6IjM3YTlhYzJmLTA5NjgtNGMyNy1hMDU2LTQ4ZDQ1ZTY0ODUyYyIsImMiOjEwfQ%3D%3D" class="button primary small">Power BI</a></li>
-							</ul>
-							</div>
+	</head>
+	<body>
+		<div class="preloader">
+			<svg width="50px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400"><defs><style type="text/css">@keyframes draw{100%{stroke-dashoffset: 0}}path{animation: draw 2s ease-in-out infinite}</style><clipPath id="hc"><path d="M 191 207 C 162 162 112 54 51 70 C -22 121 143 314 188 356 C 234 303 400 157 352 88 C 324 54 214 171 191 207 Z "/></clipPath></defs><path fill="none" stroke="#DA72B2" stroke-width="44" stroke-linecap="round" stroke-dasharray="3703" stroke-dashoffset="3703" clip-path="url(#hc)" d="M 120 0 C 88 77 -2 154 3 160 C 8 166 182 47 189 57 C 196 67 2 223 7 228 C 12 233 183 98 192 109 C 201 120 24 280 31 289 C 38 298 349 44 356 53 C 363 62 73 310 88 329 C 304 201 387 88 383 85 C 379 82 112 361 121 370 C 130 379 348 162 356 171"></path></svg>
+		</div>
+
+		<article class="parallax-wrapper">
+	  
+		  <!-- Header section -->
+		  <header>
+			<!-- Parallax elements -->
+			<img src="https://svgshare.com/i/r3R.svg" class="parallax-el" data-paralax="1"/>
+			<img src="https://svgshare.com/i/r1y.svg" class="parallax-el" data-paralax="2"/>
+			<img src="https://svgshare.com/i/r3a.svg" class="parallax-el" data-paralax="3"/>
+			<img src="https://svgshare.com/i/r1x.svg" class="parallax-el" data-paralax="4"/>
+			<img src="https://svgshare.com/i/r3Q.svg" class="parallax-el" data-paralax="5"/>
+			<img src="https://svgshare.com/i/uV1.svg" class="parallax-el" data-paralax="6"/>
+			<!-- Main title (a parallax element as well) -->
+			<h1><span style="display: block; text-align: center;" data-paralax="7">👩‍🚀🚀🌌</span>Which Analytics Skills Are in High Demand Today?</h1>
+		  </header>
+	  
+		  <!-- Story section -->
+		  <section class="story">
+			<div class="inner">
+			  <h6 style="color: #aaacff; text-align: center;">July 2023</h6>
+					<span class="image fit"><img src="images/1.png" alt="" /></span>
+					<h3>Introduction and Objective</h3>
+					<p>Within the scope of this study, my goal is to identify which analytical skills are now in high demand in the labour market. By analysing LinkedIn job postings, I hope to provide job seekers with valuable insights into the skills required for success in analytics careers.</p>
+					<h3>Methodology</h3>
+					<p>Specifically, I scraped LinkedIn for Data Scientist and Data Analyst job listings using Python and the BeautifulSoup library.
+						I zeroed in on strategic areas in Vietnam and India to find the best job openings. Following this, the data was processed and cleaned before being analysed in the Jupyter Lab.</p>
+<p></p>	
+				<h2>Analysis</h2>
+
+					<h3>Data Collection</h3>
+					<p>This investigation relied on information mined from the professional networking site LinkedIn. I gathered data on two overarching role categories: <strong data-style="red">🚀 Data Scientist</strong> and <strong data-style="red">📊 Data Analyst</strong>. 
+						My scheme is based on fetching a job description, returned by GET method to check skills in demand: <strong>Python</strong>, <strong>Power BI</strong>, <strong>Jupyter</strong>, <strong>SQL</strong>, <strong>Tableau</strong>, <strong>Excel</strong>. Noting that I use publicly accessible LinkedIn data for purely academic and instructional reasons.</p>
+					<p><i>BeautifulSoup</i> is being used to extract data from online job boards. The web pages are retrieved using the <i>requests</i> library, and then information like job positions and necessary abilities are extracted using the <i>soup</i> method.</p>								
+					<h3>Data Integrity</h3>
+					<p>We subjected the collected data to stringent reviews and validation procedures to ensure accuracy and integrity. Any biases caused by site scraping were accounted for, and we dealt with any missing or inconsistent data points appropriately.</p>
+					<h3>Data Visualization</h3>
+					<p>For a comprehensive grasp, I built interactive and aesthetically appealing visualisations in two distinct ways: by continuing the analysis in Jupyter and by exporting the database to Power BI.
+						Multiple graph styles were employed to illustrate the correlation between skill categories, levels of expertise, and the prevalence of job postings.</p>
+<p></p>
+			<h2>Jupyter Lab: Code Documentation</h3>
+			
+					<p><span class="image main"><img src="images/1.1.gif" alt="" /></span></p>
+					
+					<ul class="icons alt actions stacked">
+						<span class="authors-row">
+							<strong data-style="green"><a rel="author" href="https://github.com/AnalyticsByThuy/projects/blob/main/Analytics_Job_Skill_LinkedIn_2723.py" target="_blank">🤖 GitHub</a></strong>
+						</span>
+					</ul>
+					<div></div>
+				
+<p></p>
+			<h2>Power BI Dashboard</h2>
+	
+				<p>The results of my project may be explored through a user-friendly interface, provided through Power BI dashboard. This allows to sort job listings according to preferred location, job type, and skill sets. Hovering over visual elements reveals additional details and context.</p>
+				<p><span class="image main"><img src="images/1.2.gif" alt="" /></span></p>
+				<ul class="icons alt actions stacked">	
+					<span class="authors-row">
+						<strong data-style="red">🤡<a rel="author" href="https://app.powerbi.com/view?r=eyJrIjoiYzhjYjE4OTQtMzBjMi00YWRlLThiYjMtMjU4M2M5YjM0MjAyIiwidCI6IjM3YTlhYzJmLTA5NjgtNGMyNy1hMDU2LTQ4ZDQ1ZTY0ODUyYyIsImMiOjEwfQ%3D%3D" target="_blank">Power BI</a></strong>
+					</span>
+				</ul>
+			<div></div>
+			<h2>Conclusion</h2>
+								
+			<p> The analytics job market is experiencing a staggering 81.05% increase in the number of posts from the current Iek compared to the previous Iek. Notably, Vietnam has outshined India in this trend, with a remarkable upsurge in analytics job opportunities. Delhi has emerged as the city with the highest number of job postings (43.27%) in India, while Ho Chi Minh City takes the lead in Vietnam with 55.75%.</p>
+			
+			<p> In the job market, possessing skills in <strong data-style="blue">👧 Python</strong>, <strong data-style="red">🌻 SQL</strong>, and <strong data-style="green">🛸 Excel</strong> is crucial, particularly for entry-level and mid-senior positions. Additionally, visualization skills such as PoIr BI and Tableau are also preferred. They appeared in around 30 - 45% of job postings, indicating more chances of work opportunities. Specifically:</p>
+			<ul>
+				<li><strong data-style="red">📊 Data Analysts:</strong> SQL skills are highly sought with 89.25% of job postings emphasizing this requirement. Excel and Python follow closely, with 84.75% and 80.75% respectively, forming a strong skillset combination in this sector.</li>
+				<li><strong data-style="red">🚀 Data Scientists:</strong> On the other hand, Python is required most as an estimated 79.75% of job postings specify it as a must-have skill. Excel ranks second at 64.01%, folloId by SQL at 54.50%.</li>
+			</ul>	
+			<p>Entry-level positions place a stronger emphasis on all skills, underscoring their importance for aspiring analytics professionals starting their careers.</p>
+			<p>It is evident that a strong command of these skills is vital for success in the analytics job market. Professionals aspiring to excel in the analytics field should focus on developing their proficiency in Python, SQL, and Excel, first of all, to remain competitive and capitalize on the growing opportunities in the job market.</p>
+			<h3>Citations and References</h3>
+			<p>This project employed BeautifulSoup library version 4.11.1 for web scraping, and data visualization was accomplished using Power BI Desktop version 2.119.701.0.</p>
+			<h3>Data Privacy and Ethics</h3>
+			<p>No private or sensitive information was gathered via the web scraping procedure in order to uphold data privacy and conform to LinkedIn's terms of service. This analysis makes use of publicly available data for the express aim of furthering academic study.</p>
+
+			  <!-- Credits section -->
+			<section class="credits">
+				<address class="credits">
+				  	<div class="row">
+	  
+					<span class="job">#home</span>
+					<span class="authors-row">
+					  <strong data-style="red">👻<a rel="author" href="index.html" target="_blank">My World</a></strong>
+					</span>
+	  
+				  </div>
+				  <div class="row">
+					<span class="job">#abt</span>
+					<span class="authors-row">
+					  <strong data-style="green">🧸<a rel="author" href="projects.html" target="_blank">AnalyticsByThuy</a></strong>
+					</span>
+				  </div>
+				  <div class="row">
+					<span class="job">#contact</span>
+					<span class="authors-row">
+					  <strong data-style="blue">🙈<a rel="author" href="contact.html" target="_blank">Get in Touch</a></strong>
+					</span>
+				  </div>
+				</address>
+			  </section>
 			</div>
+		  </section>
 
-				<!-- Footer -->
-					<footer id="footer">
-							<section>
-								<ul class="icons alt">
-									<li><a href="https://www.linkedin.com/in/tn107/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
-									<li><a href="https://github.com/AnalyticsByThuy" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</section>
-							
-							
-						</footer>
+		</article>
+	  
 
-				<!-- Copyright -->
-					<div id="copyright">
-						<ul><li>&copy; TN</li></ul>
-					</div>
+<script>
+	var button1 = document.getElementById("code-button-1");
+	var iframe1 = document.getElementById("iframe-1");
+	button1.addEventListener("click", function() {
+		if (iframe1.style.display === "none") {
+			iframe1.style.display = "block";
+		} else {
+			iframe1.style.display = "none";
+		}
+	});
 
-			</div>
+	var button2 = document.getElementById("code-button-2");
+	var iframe2 = document.getElementById("iframe-2");
+	button2.addEventListener("click", function() {
+		if (iframe2.style.display === "none") {
+			iframe2.style.display = "block";
+		} else {
+			iframe2.style.display = "none";
+		}
+	});
+</script>
 
+				
 		<!-- Scripts -->
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+			<script>
+				document.addEventListener("DOMContentLoaded", function () {
+				var bigText = document.querySelector(".bigText");
+				var bigTextDiv = document.querySelector(".bigText div");
+				var bigTextImg = document.querySelector(".bigText img");
+				var bigTextSticker1 = document.querySelector(".bigText__sticker1");
+				var bigTextSticker2 = document.querySelector(".bigText__sticker2");
+				var bigTextSticker3 = document.querySelector(".bigText__sticker3");
+				var bigTextSticker4 = document.querySelector(".bigText__sticker4");
+			
+				var bigTextTL = gsap.timeline({
+					scrollTrigger: {
+					trigger: bigText,
+					scrub: 1,
+					pin: true,
+					start: 'top top',
+					end: 'bottom bottom',
+					invalidateOnRefresh: true
+					}
+				});
+			
+				bigTextTL.fromTo(bigTextDiv, {x: 0}, {x: () => -(bigTextDiv.offsetWidth - window.innerWidth), ease: "none"})
+				bigTextTL.fromTo(bigTextImg, {x: 0}, {x: "-100%", ease: "none"}, 0)
+				bigTextTL.fromTo(bigTextSticker1, {x: 0}, {x: "-100%", ease: "none"}, 0)
+				bigTextTL.fromTo(bigTextSticker2, {x: 0}, {x: "-200%", ease: "none"}, 0)
+				bigTextTL.fromTo(bigTextSticker3, {x: 0}, {x: "-200%", ease: "none"}, 0)
+				bigTextTL.fromTo(bigTextSticker4, {x: 0}, {x: "-100%", ease: "none"}, 0);
+				});
+			</script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>

@@ -7,142 +7,295 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body style="background-repeat: repeat; background-image: url('images/bg.gif');" class="is-preload">
-		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+			main {
+  background-color: #e8e4dc;
+  font-family: "Poppins";
+  margin: 0;
+  overflow-x: hidden
+}
+.flex, .flex__col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-				<!-- Intro -->
-			<div id="intro">
-						<div class="gif-container" >
-							<img style="height: 70px" src="images/me.gif" alt="GIF">
-						</div>
-						<h1 class="animated-word">Thuy Nguyen</h1>
-						<p>Republic's Investor • Data Analyst • Digital Partnerships</p>
-						<p>@AnalyticsByThuy</p>
-						<ul class="actions">
-							<li><a href="#header" class="button icon solid solo fa-star scrolly">Continue</a></li>
-						</ul>
-					</div>
+.flex__col {
+  flex-direction: column;
+}
 
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo" style="border: none;"><img src="images/logo.png" width="50" height="50" style="border-radius: 30%;"/></a>
-					</header>
+.content {
+  width: calc(100% - 120px);
+  height: calc(100vh - 120px);
+  max-height: 60vw;
+  padding: 60px;
+  justify-content: space-between;
+}
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li class="active"><a href="about.html">About</a></li>
-							<li><a href="projects.html">Projects</a></li>
-							<li><a href="CV.html">CV</a></li>
-							<li><a href="contact.html">Contact</a></li>
-						</ul>
-						<ul class="icons">
-							<li><a href="https://www.linkedin.com/in/tn107/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-							<li><a href="https://github.com/AnalyticsByThuy" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-						</ul>
-					</nav>
+.content__first {
+  justify-content: space-between;
+  align-items: flex-start;
+}
 
-				<!-- Main -->
-					<div id="main">
+.content.reverse .content__first {
+  flex-direction: row-reverse;
+}
 
-						<!-- Featured Post -->
-							<article class="post featured">
-								<style> 
-									.gorgeous-text {
-											font-family: 'Georgia', serif;
-											font-weight: bold;
-											font-size: 1.2rem;
-											color: #c574ba;
-											text-align: center;
-											margin: 20px 120px 20px 120px;
-										}
-									.animate-charcter
-									{
-									text-transform: uppercase;
-									background-image: linear-gradient(
-										-225deg,
-										#231557 0%,
-										#44107a 29%,
-										#ff1361 67%,
-										#fff800 100%
-									);
-									
-									background-clip: border-box;
-									background-size: 200% auto;
-									color: #fff;
-									background-clip: text;
-									-webkit-background-clip: text;
-									-webkit-text-fill-color: transparent;
-									animation: textclip 2s linear infinite;
-									display: inline-block;
-									}
+.content__first h1 {
+  width: 45%;
+  font-size: 7.5vw;
+  line-height: 100%;
+  margin: 0;
+  left:0;
+  right: 0;
+}
 
-									@keyframes textclip {
-									to {
-										background-position: 200% center;
-									}
-									}
-								</style>
+.content__first p {
+  width: 45%;
+  font-size: 1.6vw;
+  font-weight: 500;
+  margin: 0;
+  left:0;
+  right: 0;
+}
+
+.content__first p a {
+  color: #000;
+}
+
+ul.content__second {
+  flex-flow: wrap;
+  gap: 10px;
+  justify-content: flex-start;
+  margin: 80px 0 0 0;
+  padding: 0;
+}
+
+.content.reverse ul.content__second {
+  justify-content: flex-end;
+}
+
+ul.content__second li {
+  font-size: 2vw;
+  list-style: none;
+  border: 2px solid #212121;
+  border-radius: 100px;
+  padding: 5px 20px;
+  text-transform: uppercase;
+}
+
+.bigText {
+  position: relative;
+  width: 100vw;
+  height: 200vh;
+  margin: 100px 0 20px 0;
+}
+
+.bigText .bigText__inner {
+  position: absolute;
+  top: 50vh;
+  left: 0;
+  width: auto;
+  height: 120vh;
+  font-size: 60vh;
+  font-weight: 600;
+  line-height: 100%;
+  white-space: nowrap;
+  transform: translateY(-50%);
+}
+
+.bigText img {
+  position: absolute;
+  top: 10%;
+  left: 35%;
+  width: 30vh;
+  height: 30vh;
+  object-fit: cover;
+  filter: drop-shadow(-.5vh -.5vh 0 #fff) drop-shadow(-.5vh .5vh 0 #fff) drop-shadow(.5vh -.5vh 0 #fff) drop-shadow(.5vh .5vh 0 #fff);
+}
+
+.bigText__sticker {
+  position: absolute;
+  font-size: 6vh;
+  font-weight: 900;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #fff;
+  -webkit-text-stroke: .3vh #000;
+  text-shadow: .3vh .3vh 0 #000;
+  padding: 1vh 4vh;
+  border: .5vh solid #000;
+  border-radius: 8px;
+  box-shadow: -1vh -1vh 0 #fff, 1vh 1vh 0 #fff, -1vh 1vh #fff, 1vh -1vh #fff;
+}
+
+.bigText__sticker1 {
+  bottom: 20%;
+  left: 20%;
+  background-color: #e04747;
+  transform: rotate(5deg);
+}
+.bigText__sticker2 {
+  top: 40%;
+  left: 45%;
+  background-color: #e5bc3b;
+  transform: rotate(-5deg);
+}
+.bigText__sticker3 {
+  top: 60%;
+  left: 60%;
+  background-color: #286bef;
+  transform: rotate(5deg);
+}
+.bigText__sticker4 {
+  top: 30%;
+  right: 10%;
+  background-color: #e567d0;
+  transform: rotate(-5deg);
+}
+		</style>
+		<style> 
+			.gorgeous-text {
+					font-family: 'Georgia', serif;
+					font-weight: bold;
+					color: #c574ba;
+				}
+			.animate-charcter
+			{
+			text-transform: uppercase;
+			background-image: linear-gradient(
+				-225deg,
+				#231557 0%,
+				#44107a 29%,
+				#ff1361 67%,
+				#fff800 100%
+			);
 			
-								<div style="text-align: center; margin: 20px;">
-									<h1 class="animate-charcter" style="font-family: 'Arial Black', sans-serif; font-size: 36px;">Welcome to my <br> Enchanting Analytics World</h1>
-									<p class="gorgeous-text">Where the magic of self-taught development breathes life into projects that reflect my analytic voyage!</p>
-									<div style="margin: 30px;">
-										<video src="images/about.mp4" alt="Enchanting Analytics" style="border-radius: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); max-width: 100%;" autoplay loop controls></video>
-									</div>
-																		<p style="font-size: 1.1rem;">Picture this: a frustrated soul, fed up with tardy quarterly data collections from the IT team. That's me! I thought, "Why not take matters into my own hands?" And so, the spark of this incredible career path was ignited. As a bonus, I was finally able to lend a hand to the IT team without worrying about holding up report deadlines.</p>
-									<p style="font-size: 1.1rem;">The more I delved into the mystical world of data, the more my passion bloomed like a wildflower in spring. Time flies when you're having fun, and trust me, I'm having a blast!</p>
-									<p style="font-size: 1.1rem;">Let's cut to the chase and explore <a href="projects.html" style="color: #ff4df0; text-decoration: none; font-weight: bold;">Analytics By Thuy</a>! Your feedback is valuable, as it helps me nourish my passion for analytics and take it to the next level.</p>
-									<style>
-										@keyframes shimmer {
-											0% {
-												color: #b209cc;
-												text-shadow: none;
-											}
-											50% {
-												color: #d7aefb;
-												text-shadow: 0 0 5px #d7aefb, 0 0 10px #d7aefb, 0 0 15px #d7aefb;
-											}
-											100% {
-												color: #c000dd;
-												text-shadow: none;
-											}
-										}
-										.bling-bling-text {
-											font-size: 22px;
-											font-weight: bold;
-											animation: shimmer 2s linear infinite;
-											text-align: center;
-										}
-									</style>
-									<p class="bling-bling-text">📊 Data Never Lies ✨</p>
-								</div>
-								<!-- Footer -->
+			background-clip: border-box;
+			background-size: 200% auto;
+			color: #fff;
+			background-clip: text;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			animation: textclip 2s linear infinite;
+			display: inline-block;
+			}
+
+			@keyframes textclip {
+			to {
+				background-position: 200% center;
+			}
+			}
+		</style>
+		<style>
+			@keyframes shimmer {
+				0% {
+					color: #b209cc;
+					text-shadow: none;
+				}
+				50% {
+					color: #d7aefb;
+					text-shadow: 0 0 5px #d7aefb, 0 0 10px #d7aefb, 0 0 15px #d7aefb;
+				}
+				100% {
+					color: #c000dd;
+					text-shadow: none;
+				}
+			}
+			.bling-bling-text {
+				font-weight: bold;
+				animation: shimmer 5s linear infinite;
+				text-align: right;
+			}
+		</style>
+	
+	</head>
+	<body style="background-color: #e8e4dc;" class="is-preload">
+		<div class="preloader">
+			<svg width="50px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400"><defs><style type="text/css">@keyframes draw{100%{stroke-dashoffset: 0}}path{animation: draw 2s ease-in-out infinite}</style><clipPath id="hc"><path d="M 191 207 C 162 162 112 54 51 70 C -22 121 143 314 188 356 C 234 303 400 157 352 88 C 324 54 214 171 191 207 Z "/></clipPath></defs><path fill="none" stroke="#DA72B2" stroke-width="44" stroke-linecap="round" stroke-dasharray="3703" stroke-dashoffset="3703" clip-path="url(#hc)" d="M 120 0 C 88 77 -2 154 3 160 C 8 166 182 47 189 57 C 196 67 2 223 7 228 C 12 233 183 98 192 109 C 201 120 24 280 31 289 C 38 298 349 44 356 53 C 363 62 73 310 88 329 C 304 201 387 88 383 85 C 379 82 112 361 121 370 C 130 379 348 162 356 171"></path></svg>
+		</div>
 		
-					</div>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<section class="split contact">
-							<section>
-								<ul class="icons alt">
-									<li><a href="https://www.linkedin.com/in/tn107/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
-									<li><a href="https://github.com/AnalyticsByThuy" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</section>
-						</section>
-					</footer>
-
-				<!-- Copyright -->
-					<div id="copyright">
-						<ul><li>&copy; TN</li></ul>
-					</div>
-
+		<main class="flex__col">
+			<div class="content flex__col">
+					  	<div class="content__first w100 flex">
+							<h1 class="animate-charcter" style="font-family: 'Arial Black', sans-serif;">Call me <br>Thuy <br>
+							</h1>
+							<p>WELCOME TO MY ENCHANTING ANALYTICS WORLD! <br/><br/>Where the magic of self-taught development breathes life into projects that reflect my analytic voyage!</p>
+						</div>
+					<ul class="content__second w100 flex">
+						<li><a href="about.html">About</a></li>
+						<li><a href="projects.html">Projects</a></li>
+						<li><a href="CV.html">CV</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
 			</div>
+			<div class="bigText flex">
+					  <div class="bigText__inner flex">
+						WOOO LET'S GO
+						<img src="images/me.gif"/>
+						<div class="bigText__sticker bigText__sticker1">Grace</div>
+						<div class="bigText__sticker bigText__sticker2">Fireee</div>
+						<div class="bigText__sticker bigText__sticker3">So cool !</div>
+						<div class="bigText__sticker bigText__sticker4">Be Real</div>
+					  </div>
+			</div>
+			<div class="content reverse flex__col">
+				<div>
+					<video src="images/about.mp4" alt="Enchanting Analytics" style="border-radius: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); max-width: 100%; margin-bottom: 2vh;" autoplay loop controls></video>
+				</div>
+			<div></div>>
+				<div class="content__first w100 flex">
+					<h1 class="bling-bling-text">Data Never Lies <br/>✨</h1>
+						<p>
+							Picture this: a frustrated soul, fed up with tardy quarterly data collections from the IT team. That's me! I thought, "Why not take matters into my own hands?" And so, the spark of this incredible career path was ignited. As a bonus, I was finally able to lend a hand to the IT team without worrying about holding up report deadlines.
+						  <br/><br/>
+						  The more I delved into the mystical world of data, the more my passion bloomed like a wildflower in spring. Time flies when you're having fun, and trust me, I'm having a blast!
+						  <br/><br/>
+						  Let's cut to the chase and explore <a href="projects.html" style="color: #ff4df0; text-decoration: none; font-weight: bold;">Analytics By Thuy</a>! Your feedback is valuable, as it helps me nourish my passion for analytics and take it to the next level.
+						</p>
+				</div>
+				<div class="content flex__col"></div>
+			</div>
+		
+		</main>
 
+		<div id="copyright" style="color: #000;bottom: 0; position: fixed; margin: 0; background-color: #f5f2ecbe;min-width: 100vw;">
+				<ul><li>&copy; TN</li></ul>
+		</div>
+				
 		<!-- Scripts -->
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+			<script>
+				document.addEventListener("DOMContentLoaded", function () {
+				var bigText = document.querySelector(".bigText");
+				var bigTextDiv = document.querySelector(".bigText div");
+				var bigTextImg = document.querySelector(".bigText img");
+				var bigTextSticker1 = document.querySelector(".bigText__sticker1");
+				var bigTextSticker2 = document.querySelector(".bigText__sticker2");
+				var bigTextSticker3 = document.querySelector(".bigText__sticker3");
+				var bigTextSticker4 = document.querySelector(".bigText__sticker4");
+			
+				var bigTextTL = gsap.timeline({
+					scrollTrigger: {
+					trigger: bigText,
+					scrub: 1,
+					pin: true,
+					start: 'top top',
+					end: 'bottom bottom',
+					invalidateOnRefresh: true
+					}
+				});
+			
+				bigTextTL.fromTo(bigTextDiv, {x: 0}, {x: () => -(bigTextDiv.offsetWidth - window.innerWidth), ease: "none"})
+				bigTextTL.fromTo(bigTextImg, {x: 0}, {x: "-100%", ease: "none"}, 0)
+				bigTextTL.fromTo(bigTextSticker1, {x: 0}, {x: "-100%", ease: "none"}, 0)
+				bigTextTL.fromTo(bigTextSticker2, {x: 0}, {x: "-200%", ease: "none"}, 0)
+				bigTextTL.fromTo(bigTextSticker3, {x: 0}, {x: "-200%", ease: "none"}, 0)
+				bigTextTL.fromTo(bigTextSticker4, {x: 0}, {x: "-100%", ease: "none"}, 0);
+				});
+			</script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>

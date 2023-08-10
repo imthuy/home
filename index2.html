@@ -1,0 +1,2034 @@
+<!DOCTYPE HTML>
+<html>
+	 
+	<head>
+		<link rel="icon" type="image/png" href="images/logo.png">
+		<title>Thuy Nguyen</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+					
+					* {
+					margin: 0;
+					padding: 0;
+					box-sizing: border-box;
+				}
+				
+				body {
+					
+					background: #000000;
+					overflow-x: hidden;
+					font-family: 'Poppins', sans-serif;
+					scroll-behavior: smooth;
+				}
+				
+				.full-screen-3d-example {
+					opacity: 0;
+					transition: opacity 1s ease-out;
+				}
+				
+				.full-screen-3d-example.-loaded {
+					opacity: 1;
+				}
+				.menu-container {
+			width: 100%;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			position: absolute;
+			z-index: 1;
+
+			}
+			.text {
+		font-size: 10vw;
+		letter-spacing: -.01em;
+		line-height: 100%;
+		margin: 0;
+		
+		width: 100%;
+		color: rgba(182, 182, 182, 0.363);
+		background: linear-gradient(to right, #ffffff, #f584ff) no-repeat;
+		-webkit-background-clip: text;
+		background-clip: text;
+		background-size: 0%;
+		transition: background-size cubic-bezier(.1,.5,.5,1) 0.5s;
+		
+
+		border-bottom: 1px solid #69666671;
+		
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+		position: relative;
+		}
+
+		span {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: #d1449b;
+		color: #0D0D0D;
+		
+		clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
+		transform-origin: center;
+		transition: all cubic-bezier(.1,.5,.5,1) 0.4s;
+		
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		}
+
+		.text:hover > span {
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+		}
+
+		a {
+		text-decoration: none;
+		color: inherit;
+		}
+		@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+		</style>
+		<style>
+			.cursor {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			font-size: 48px;
+			font-weight: bold;
+			color: #ffffff;
+			text-align: center;
+			white-space: normal;
+			overflow: hidden;
+			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+			}
+			
+			/* Animation */
+			.typewriter-animation {
+			animation: 
+				fadeIn 1s ease-in,
+				typewriter 4s steps(40) 1s 1 normal both,
+				blinkingCursor 500ms steps(40) infinite normal,
+				colorChange 6s alternate infinite;
+			}
+			
+			@keyframes fadeIn {
+			from { opacity: 0; }
+			to { opacity: 1; }
+			}
+			
+			@keyframes typewriter {
+			from { width: 0; }
+			to { width: 100%; }
+			}
+			
+			@keyframes blinkingCursor {
+			from { border-right-color: rgba(255, 255, 255, 0.75); }
+			to { border-right-color: transparent; }
+			}
+			
+			@keyframes colorChange {
+			0% {
+				color: #f584e6;
+				letter-spacing: normal;
+			}
+			50% {
+				color: #8bd0ff;
+				letter-spacing: 5px;
+			}
+			100% {
+				color: #f584e6;
+				letter-spacing: normal;
+			}
+			}
+
+
+			
+			.scroll-down-icon {
+			position: absolute;
+			bottom: 20px;
+			left: 50%;
+			transform: translateX(-50%);
+			color: #ffdef2b2;
+			font-size: 24px;
+			animation: bounceArrow 0.5s infinite alternate;
+			z-index: 1;
+			}
+
+			@keyframes bounceArrow {
+			from { transform: translateX(-50%) translateY(0); }
+			to { transform: translateX(-50%) translateY(10px); }
+			}
+
+			
+  		</style>
+	
+
+	</head>
+
+	<body style="background-repeat: repeat; background-image: url('images/bg.gif');" class="is-preload">
+		<!-- Your impressive preloader -->
+		<div class="preloader">
+			<img src="images/me.gif" alt="">
+		</div>
+
+		<style>
+		@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap");
+
+			:root {
+			--bg: #000000;
+			--clr-1: #00c2ff;
+			--clr-2: #33ff8c;
+			--clr-3: #ffc640;
+			--clr-4: #e54cff;
+			
+			--blur: 1rem;
+			--fs: clamp(3rem, 8vw, 7rem);
+			--ls: clamp(-1.95px, -0.75vw, -3.5px);
+			}
+			
+			body {
+			
+			place-items: center;
+			background-color: var(--bg);
+			color: #fff;
+			font-family: "Inter", "Poppins", Arial, sans-serif;
+			}
+			
+			*,
+			*::before,
+			*::after {
+			font-family: inherit;
+			box-sizing: border-box;
+			}
+			
+			.content {
+			text-align: center;
+			}
+			
+			.title {
+					top: 19vh;
+					display: grid;
+					position: absolute;
+					white-space: nowrap;
+					transform: translate(-50%, -50%);
+					font-size: 13vw;
+					letter-spacing: 0.5vw;
+					overflow: hidden;
+					color: transparent;
+					-webkit-text-fill-color: transparent; /* Safari */
+					-webkit-text-stroke: 0.1rem rgb(255, 117, 237); /* Safari */
+					animation: textStrokeAnimation 5s infinite;
+				}
+
+				@keyframes textStrokeAnimation {
+					0% {
+						letter-spacing: 1vw;
+						font-size: 5vw;
+					}
+					50% {
+						letter-spacing: 3vw;
+						font-size: 11vw;
+					}
+					100% {
+						letter-spacing: 1vw;
+						font-size: 5vw;
+						
+					}
+				}
+
+					.subtitle {
+				place-items: center;
+				text-align: center;
+				position: relative;
+				font: "Poppins";
+				font-size: 0.7rem;
+				text-transform: uppercase;
+				letter-spacing: 0.1vw;
+				top: 9vh;
+				color: #dbccff;
+			}
+					
+
+
+		</style>
+
+		<div  id="root" class="full-screen-3d-example content ">
+			
+				<h1 class="cursor title"> thuy nguyen </h1>
+				<p class="subtitle "> Republic's Investor • Data Analyst • Digital Partnerships  </p>
+				<div id="clock"></div>
+
+			<div class="scroll-down-icon">
+			  <a href="#mn" class="fas fa-chevron-down"></a>
+			</div>						
+		</div>
+
+		<script>// Smooth scroll function
+	// Smooth scroll function with fading effect
+	function smoothScrollWithFade(target, duration) {
+	const targetElement = document.querySelector(target);
+	if (!targetElement) return;
+
+	const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+	const startPosition = window.scrollY;
+	const distance = targetPosition - startPosition;
+	let startTime = null;
+
+	function scrollAnimation(currentTime) {
+		if (startTime === null) startTime = currentTime;
+		const timeElapsed = currentTime - startTime;
+		const scrollAmount = easeInOutQuad(timeElapsed, startPosition, distance, duration);
+		window.scrollTo(0, scrollAmount);
+
+		const opacity = Math.min(1, timeElapsed / duration);
+		targetElement.style.opacity = opacity;
+
+		if (timeElapsed < duration) requestAnimationFrame(scrollAnimation);
+	}
+
+	// Easing function for smooth scroll
+	function easeInOutQuad(t, b, c, d) {
+		t /= d / 2;
+		if (t < 1) return c / 2 * t * t + b;
+		t--;
+		return -c / 2 * (t * (t - 2) - 1) + b;
+	}
+
+	requestAnimationFrame(scrollAnimation);
+	}
+
+	// Add click event listener to the icon
+	const scrollIcon = document.querySelector('.scroll-down-icon a');
+	scrollIcon.addEventListener('click', function (event) {
+	event.preventDefault();
+	smoothScrollWithFade(this.getAttribute('href'), 1000); // Adjust duration as needed
+	});
+		</script>
+
+		<div id="mn" class="menu-container">
+			<h1 class="text">about<span><a href="about.html">WOAH</a></span></h1>
+			<h1 class="text">Projects<span><a href="projects.html">Analytics by Thuy</a></span></h1>
+			<h1 class="text">CV<span><a href="CV.html">Full-time Exp.</a></span></h1>
+			<h1 class="text">LIKE THIS?<span><a href="https://twitter.com/juxtopposed" target="_blank">LET'S CONNECT</a></span></h1>
+		</div>
+
+		<script>
+		const cursor = document.querySelector(".cb-cursor");
+			window.onpointermove = event => {
+				const { clientX, clientY } = event;
+				cursor.animate({
+					left: `${clientX}px`,
+					top: `${clientY}px`
+				}, { duration: 3000, fill: "forwards" })
+			}
+			const elements = [...document.querySelectorAll("h2 div")]
+			elements.map(element => {
+				element.onmouseover = () => {
+					cursor.classList.add("-video")
+				}
+				element.onmouseout = () => {
+					cursor.classList.remove("-video")
+				}
+			})
+		</script>
+
+<script>
+	'use strict';
+
+const canvas = document.getElementsByTagName('canvas')[0];
+canvas.width = canvas.clientWidth;
+canvas.height = canvas.clientHeight;
+
+let config = {
+  TEXTURE_DOWNSAMPLE: 1,
+  DENSITY_DISSIPATION: 0.98,
+  VELOCITY_DISSIPATION: 0.99,
+  PRESSURE_DISSIPATION: 0.8,
+  PRESSURE_ITERATIONS: 25,
+  CURL: 28,
+  SPLAT_RADIUS: 0.004 };
+
+
+let pointers = [];
+let splatStack = [];
+
+const { gl, ext } = getWebGLContext(canvas);
+
+function getWebGLContext(canvas) {
+  const params = { alpha: false, depth: false, stencil: false, antialias: false };
+
+  let gl = canvas.getContext('webgl2', params);
+  const isWebGL2 = !!gl;
+  if (!isWebGL2)
+  gl = canvas.getContext('webgl', params) || canvas.getContext('experimental-webgl', params);
+
+  let halfFloat;
+  let supportLinearFiltering;
+  if (isWebGL2) {
+    gl.getExtension('EXT_color_buffer_float');
+    supportLinearFiltering = gl.getExtension('OES_texture_float_linear');
+  } else {
+    halfFloat = gl.getExtension('OES_texture_half_float');
+    supportLinearFiltering = gl.getExtension('OES_texture_half_float_linear');
+  }
+
+  gl.clearColor(0.0, 0.0, 0.0, 1.0);
+
+  const halfFloatTexType = isWebGL2 ? gl.HALF_FLOAT : halfFloat.HALF_FLOAT_OES;
+  let formatRGBA;
+  let formatRG;
+  let formatR;
+
+  if (isWebGL2)
+  {
+    formatRGBA = getSupportedFormat(gl, gl.RGBA16F, gl.RGBA, halfFloatTexType);
+    formatRG = getSupportedFormat(gl, gl.RG16F, gl.RG, halfFloatTexType);
+    formatR = getSupportedFormat(gl, gl.R16F, gl.RED, halfFloatTexType);
+  } else
+
+  {
+    formatRGBA = getSupportedFormat(gl, gl.RGBA, gl.RGBA, halfFloatTexType);
+    formatRG = getSupportedFormat(gl, gl.RGBA, gl.RGBA, halfFloatTexType);
+    formatR = getSupportedFormat(gl, gl.RGBA, gl.RGBA, halfFloatTexType);
+  }
+
+  return {
+    gl,
+    ext: {
+      formatRGBA,
+      formatRG,
+      formatR,
+      halfFloatTexType,
+      supportLinearFiltering } };
+
+
+}
+
+function getSupportedFormat(gl, internalFormat, format, type)
+{
+  if (!supportRenderTextureFormat(gl, internalFormat, format, type))
+  {
+    switch (internalFormat) {
+
+      case gl.R16F:
+        return getSupportedFormat(gl, gl.RG16F, gl.RG, type);
+      case gl.RG16F:
+        return getSupportedFormat(gl, gl.RGBA16F, gl.RGBA, type);
+      default:
+        return null;}
+
+  }
+
+  return {
+    internalFormat,
+    format };
+
+}
+
+function supportRenderTextureFormat(gl, internalFormat, format, type) {
+  let texture = gl.createTexture();
+  gl.bindTexture(gl.TEXTURE_2D, texture);
+  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.NEAREST);
+  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.NEAREST);
+  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
+  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+  gl.texImage2D(gl.TEXTURE_2D, 0, internalFormat, 4, 4, 0, format, type, null);
+
+  let fbo = gl.createFramebuffer();
+  gl.bindFramebuffer(gl.FRAMEBUFFER, fbo);
+  gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0, gl.TEXTURE_2D, texture, 0);
+
+  const status = gl.checkFramebufferStatus(gl.FRAMEBUFFER);
+  if (status != gl.FRAMEBUFFER_COMPLETE)
+  return false;
+  return true;
+}
+
+function pointerPrototype() {
+  this.id = -1;
+  this.x = 0;
+  this.y = 0;
+  this.dx = 0;
+  this.dy = 0;
+  this.down = false;
+  this.moved = false;
+  this.color = [30, 0, 300];
+}
+
+pointers.push(new pointerPrototype());
+
+class GLProgram {
+  constructor(vertexShader, fragmentShader) {
+    this.uniforms = {};
+    this.program = gl.createProgram();
+
+    gl.attachShader(this.program, vertexShader);
+    gl.attachShader(this.program, fragmentShader);
+    gl.linkProgram(this.program);
+
+    if (!gl.getProgramParameter(this.program, gl.LINK_STATUS))
+    throw gl.getProgramInfoLog(this.program);
+
+    const uniformCount = gl.getProgramParameter(this.program, gl.ACTIVE_UNIFORMS);
+    for (let i = 0; i < uniformCount; i++) {
+      const uniformName = gl.getActiveUniform(this.program, i).name;
+      this.uniforms[uniformName] = gl.getUniformLocation(this.program, uniformName);
+    }
+  }
+
+  bind() {
+    gl.useProgram(this.program);
+  }}
+
+
+function compileShader(type, source) {
+  const shader = gl.createShader(type);
+  gl.shaderSource(shader, source);
+  gl.compileShader(shader);
+
+  if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS))
+  throw gl.getShaderInfoLog(shader);
+
+  return shader;
+};
+
+const baseVertexShader = compileShader(gl.VERTEX_SHADER, `
+    precision highp float;
+    precision mediump sampler2D;
+
+    attribute vec2 aPosition;
+    varying vec2 vUv;
+    varying vec2 vL;
+    varying vec2 vR;
+    varying vec2 vT;
+    varying vec2 vB;
+    uniform vec2 texelSize;
+
+    void main () {
+        vUv = aPosition * 0.5 + 0.5;
+        vL = vUv - vec2(texelSize.x, 0.0);
+        vR = vUv + vec2(texelSize.x, 0.0);
+        vT = vUv + vec2(0.0, texelSize.y);
+        vB = vUv - vec2(0.0, texelSize.y);
+        gl_Position = vec4(aPosition, 0.0, 1.0);
+    }
+`);
+
+const clearShader = compileShader(gl.FRAGMENT_SHADER, `
+    precision highp float;
+    precision mediump sampler2D;
+
+    varying vec2 vUv;
+    uniform sampler2D uTexture;
+    uniform float value;
+
+    void main () {
+        gl_FragColor = value * texture2D(uTexture, vUv);
+    }
+`);
+
+const displayShader = compileShader(gl.FRAGMENT_SHADER, `
+    precision highp float;
+    precision mediump sampler2D;
+
+    varying vec2 vUv;
+    uniform sampler2D uTexture;
+
+    void main () {
+        gl_FragColor = texture2D(uTexture, vUv);
+    }
+`);
+
+const splatShader = compileShader(gl.FRAGMENT_SHADER, `
+    precision highp float;
+    precision mediump sampler2D;
+
+    varying vec2 vUv;
+    uniform sampler2D uTarget;
+    uniform float aspectRatio;
+    uniform vec3 color;
+    uniform vec2 point;
+    uniform float radius;
+
+    void main () {
+        vec2 p = vUv - point.xy;
+        p.x *= aspectRatio;
+        vec3 splat = exp(-dot(p, p) / radius) * color;
+        vec3 base = texture2D(uTarget, vUv).xyz;
+        gl_FragColor = vec4(base + splat, 1.0);
+    }
+`);
+
+const advectionManualFilteringShader = compileShader(gl.FRAGMENT_SHADER, `
+    precision highp float;
+    precision mediump sampler2D;
+
+    varying vec2 vUv;
+    uniform sampler2D uVelocity;
+    uniform sampler2D uSource;
+    uniform vec2 texelSize;
+    uniform float dt;
+    uniform float dissipation;
+
+    vec4 bilerp (in sampler2D sam, in vec2 p) {
+        vec4 st;
+        st.xy = floor(p - 0.5) + 0.5;
+        st.zw = st.xy + 1.0;
+        vec4 uv = st * texelSize.xyxy;
+        vec4 a = texture2D(sam, uv.xy);
+        vec4 b = texture2D(sam, uv.zy);
+        vec4 c = texture2D(sam, uv.xw);
+        vec4 d = texture2D(sam, uv.zw);
+        vec2 f = p - st.xy;
+        return mix(mix(a, b, f.x), mix(c, d, f.x), f.y);
+    }
+
+    void main () {
+        vec2 coord = gl_FragCoord.xy - dt * texture2D(uVelocity, vUv).xy;
+        gl_FragColor = dissipation * bilerp(uSource, coord);
+        gl_FragColor.a = 1.0;
+    }
+`);
+
+const advectionShader = compileShader(gl.FRAGMENT_SHADER, `
+    precision highp float;
+    precision mediump sampler2D;
+
+    varying vec2 vUv;
+    uniform sampler2D uVelocity;
+    uniform sampler2D uSource;
+    uniform vec2 texelSize;
+    uniform float dt;
+    uniform float dissipation;
+
+    void main () {
+        vec2 coord = vUv - dt * texture2D(uVelocity, vUv).xy * texelSize;
+        gl_FragColor = dissipation * texture2D(uSource, coord);
+        gl_FragColor.a = 1.0;
+    }
+`);
+
+const divergenceShader = compileShader(gl.FRAGMENT_SHADER, `
+    precision highp float;
+    precision mediump sampler2D;
+
+    varying vec2 vUv;
+    varying vec2 vL;
+    varying vec2 vR;
+    varying vec2 vT;
+    varying vec2 vB;
+    uniform sampler2D uVelocity;
+
+    vec2 sampleVelocity (in vec2 uv) {
+        vec2 multiplier = vec2(1.0, 1.0);
+        if (uv.x < 0.0) { uv.x = 0.0; multiplier.x = -1.0; }
+        if (uv.x > 1.0) { uv.x = 1.0; multiplier.x = -1.0; }
+        if (uv.y < 0.0) { uv.y = 0.0; multiplier.y = -1.0; }
+        if (uv.y > 1.0) { uv.y = 1.0; multiplier.y = -1.0; }
+        return multiplier * texture2D(uVelocity, uv).xy;
+    }
+
+    void main () {
+        float L = sampleVelocity(vL).x;
+        float R = sampleVelocity(vR).x;
+        float T = sampleVelocity(vT).y;
+        float B = sampleVelocity(vB).y;
+        float div = 0.5 * (R - L + T - B);
+        gl_FragColor = vec4(div, 0.0, 0.0, 1.0);
+    }
+`);
+
+const curlShader = compileShader(gl.FRAGMENT_SHADER, `
+    precision highp float;
+    precision mediump sampler2D;
+
+    varying vec2 vUv;
+    varying vec2 vL;
+    varying vec2 vR;
+    varying vec2 vT;
+    varying vec2 vB;
+    uniform sampler2D uVelocity;
+
+    void main () {
+        float L = texture2D(uVelocity, vL).y;
+        float R = texture2D(uVelocity, vR).y;
+        float T = texture2D(uVelocity, vT).x;
+        float B = texture2D(uVelocity, vB).x;
+        float vorticity = R - L - T + B;
+        gl_FragColor = vec4(vorticity, 0.0, 0.0, 1.0);
+    }
+`);
+
+const vorticityShader = compileShader(gl.FRAGMENT_SHADER, `
+    precision highp float;
+    precision mediump sampler2D;
+
+    varying vec2 vUv;
+    varying vec2 vT;
+    varying vec2 vB;
+    uniform sampler2D uVelocity;
+    uniform sampler2D uCurl;
+    uniform float curl;
+    uniform float dt;
+
+    void main () {
+        float T = texture2D(uCurl, vT).x;
+        float B = texture2D(uCurl, vB).x;
+        float C = texture2D(uCurl, vUv).x;
+        vec2 force = vec2(abs(T) - abs(B), 0.0);
+        force *= 1.0 / length(force + 0.00001) * curl * C;
+        vec2 vel = texture2D(uVelocity, vUv).xy;
+        gl_FragColor = vec4(vel + force * dt, 0.0, 1.0);
+    }
+`);
+
+const pressureShader = compileShader(gl.FRAGMENT_SHADER, `
+    precision highp float;
+    precision mediump sampler2D;
+
+    varying vec2 vUv;
+    varying vec2 vL;
+    varying vec2 vR;
+    varying vec2 vT;
+    varying vec2 vB;
+    uniform sampler2D uPressure;
+    uniform sampler2D uDivergence;
+
+    vec2 boundary (in vec2 uv) {
+        uv = min(max(uv, 0.0), 1.0);
+        return uv;
+    }
+
+    void main () {
+        float L = texture2D(uPressure, boundary(vL)).x;
+        float R = texture2D(uPressure, boundary(vR)).x;
+        float T = texture2D(uPressure, boundary(vT)).x;
+        float B = texture2D(uPressure, boundary(vB)).x;
+        float C = texture2D(uPressure, vUv).x;
+        float divergence = texture2D(uDivergence, vUv).x;
+        float pressure = (L + R + B + T - divergence) * 0.25;
+        gl_FragColor = vec4(pressure, 0.0, 0.0, 1.0);
+    }
+`);
+
+const gradientSubtractShader = compileShader(gl.FRAGMENT_SHADER, `
+    precision highp float;
+    precision mediump sampler2D;
+
+    varying vec2 vUv;
+    varying vec2 vL;
+    varying vec2 vR;
+    varying vec2 vT;
+    varying vec2 vB;
+    uniform sampler2D uPressure;
+    uniform sampler2D uVelocity;
+
+    vec2 boundary (in vec2 uv) {
+        uv = min(max(uv, 0.0), 1.0);
+        return uv;
+    }
+
+    void main () {
+        float L = texture2D(uPressure, boundary(vL)).x;
+        float R = texture2D(uPressure, boundary(vR)).x;
+        float T = texture2D(uPressure, boundary(vT)).x;
+        float B = texture2D(uPressure, boundary(vB)).x;
+        vec2 velocity = texture2D(uVelocity, vUv).xy;
+        velocity.xy -= vec2(R - L, T - B);
+        gl_FragColor = vec4(velocity, 0.0, 1.0);
+    }
+`);
+
+let textureWidth;
+let textureHeight;
+let density;
+let velocity;
+let divergence;
+let curl;
+let pressure;
+initFramebuffers();
+
+const clearProgram = new GLProgram(baseVertexShader, clearShader);
+const displayProgram = new GLProgram(baseVertexShader, displayShader);
+const splatProgram = new GLProgram(baseVertexShader, splatShader);
+const advectionProgram = new GLProgram(baseVertexShader, ext.supportLinearFiltering ? advectionShader : advectionManualFilteringShader);
+const divergenceProgram = new GLProgram(baseVertexShader, divergenceShader);
+const curlProgram = new GLProgram(baseVertexShader, curlShader);
+const vorticityProgram = new GLProgram(baseVertexShader, vorticityShader);
+const pressureProgram = new GLProgram(baseVertexShader, pressureShader);
+const gradienSubtractProgram = new GLProgram(baseVertexShader, gradientSubtractShader);
+
+function initFramebuffers() {
+  textureWidth = gl.drawingBufferWidth >> config.TEXTURE_DOWNSAMPLE;
+  textureHeight = gl.drawingBufferHeight >> config.TEXTURE_DOWNSAMPLE;
+
+  const texType = ext.halfFloatTexType;
+  const rgba = ext.formatRGBA;
+  const rg = ext.formatRG;
+  const r = ext.formatR;
+
+  density = createDoubleFBO(2, textureWidth, textureHeight, rgba.internalFormat, rgba.format, texType, ext.supportLinearFiltering ? gl.LINEAR : gl.NEAREST);
+  velocity = createDoubleFBO(0, textureWidth, textureHeight, rg.internalFormat, rg.format, texType, ext.supportLinearFiltering ? gl.LINEAR : gl.NEAREST);
+  divergence = createFBO(4, textureWidth, textureHeight, r.internalFormat, r.format, texType, gl.NEAREST);
+  curl = createFBO(5, textureWidth, textureHeight, r.internalFormat, r.format, texType, gl.NEAREST);
+  pressure = createDoubleFBO(6, textureWidth, textureHeight, r.internalFormat, r.format, texType, gl.NEAREST);
+}
+
+function createFBO(texId, w, h, internalFormat, format, type, param) {
+  gl.activeTexture(gl.TEXTURE0 + texId);
+  let texture = gl.createTexture();
+  gl.bindTexture(gl.TEXTURE_2D, texture);
+  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, param);
+  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, param);
+  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
+  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+  gl.texImage2D(gl.TEXTURE_2D, 0, internalFormat, w, h, 0, format, type, null);
+
+  let fbo = gl.createFramebuffer();
+  gl.bindFramebuffer(gl.FRAMEBUFFER, fbo);
+  gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0, gl.TEXTURE_2D, texture, 0);
+  gl.viewport(0, 0, w, h);
+  gl.clear(gl.COLOR_BUFFER_BIT);
+
+  return [texture, fbo, texId];
+}
+
+function createDoubleFBO(texId, w, h, internalFormat, format, type, param) {
+  let fbo1 = createFBO(texId, w, h, internalFormat, format, type, param);
+  let fbo2 = createFBO(texId + 1, w, h, internalFormat, format, type, param);
+
+  return {
+    get read() {
+      return fbo1;
+    },
+    get write() {
+      return fbo2;
+    },
+    swap() {
+      let temp = fbo1;
+      fbo1 = fbo2;
+      fbo2 = temp;
+    } };
+
+}
+
+const blit = (() => {
+  gl.bindBuffer(gl.ARRAY_BUFFER, gl.createBuffer());
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, -1, 1, 1, 1, 1, -1]), gl.STATIC_DRAW);
+  gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, gl.createBuffer());
+  gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, new Uint16Array([0, 1, 2, 0, 2, 3]), gl.STATIC_DRAW);
+  gl.vertexAttribPointer(0, 2, gl.FLOAT, false, 0, 0);
+  gl.enableVertexAttribArray(0);
+
+  return destination => {
+    gl.bindFramebuffer(gl.FRAMEBUFFER, destination);
+    gl.drawElements(gl.TRIANGLES, 6, gl.UNSIGNED_SHORT, 0);
+  };
+})();
+
+let lastTime = Date.now();
+multipleSplats(parseInt(Math.random() * 20) + 5);
+update();
+
+function update() {
+  resizeCanvas();
+
+  const dt = Math.min((Date.now() - lastTime) / 1000, 0.016);
+  lastTime = Date.now();
+
+  gl.viewport(0, 0, textureWidth, textureHeight);
+
+  if (splatStack.length > 0)
+  multipleSplats(splatStack.pop());
+
+  advectionProgram.bind();
+  gl.uniform2f(advectionProgram.uniforms.texelSize, 1.0 / textureWidth, 1.0 / textureHeight);
+  gl.uniform1i(advectionProgram.uniforms.uVelocity, velocity.read[2]);
+  gl.uniform1i(advectionProgram.uniforms.uSource, velocity.read[2]);
+  gl.uniform1f(advectionProgram.uniforms.dt, dt);
+  gl.uniform1f(advectionProgram.uniforms.dissipation, config.VELOCITY_DISSIPATION);
+  blit(velocity.write[1]);
+  velocity.swap();
+
+  gl.uniform1i(advectionProgram.uniforms.uVelocity, velocity.read[2]);
+  gl.uniform1i(advectionProgram.uniforms.uSource, density.read[2]);
+  gl.uniform1f(advectionProgram.uniforms.dissipation, config.DENSITY_DISSIPATION);
+  blit(density.write[1]);
+  density.swap();
+
+  for (let i = 0; i < pointers.length; i++) {
+    const pointer = pointers[i];
+    if (pointer.moved) {
+      splat(pointer.x, pointer.y, pointer.dx, pointer.dy, pointer.color);
+      pointer.moved = false;
+    }
+  }
+
+  curlProgram.bind();
+  gl.uniform2f(curlProgram.uniforms.texelSize, 1.0 / textureWidth, 1.0 / textureHeight);
+  gl.uniform1i(curlProgram.uniforms.uVelocity, velocity.read[2]);
+  blit(curl[1]);
+
+  vorticityProgram.bind();
+  gl.uniform2f(vorticityProgram.uniforms.texelSize, 1.0 / textureWidth, 1.0 / textureHeight);
+  gl.uniform1i(vorticityProgram.uniforms.uVelocity, velocity.read[2]);
+  gl.uniform1i(vorticityProgram.uniforms.uCurl, curl[2]);
+  gl.uniform1f(vorticityProgram.uniforms.curl, config.CURL);
+  gl.uniform1f(vorticityProgram.uniforms.dt, dt);
+  blit(velocity.write[1]);
+  velocity.swap();
+
+  divergenceProgram.bind();
+  gl.uniform2f(divergenceProgram.uniforms.texelSize, 1.0 / textureWidth, 1.0 / textureHeight);
+  gl.uniform1i(divergenceProgram.uniforms.uVelocity, velocity.read[2]);
+  blit(divergence[1]);
+
+  clearProgram.bind();
+  let pressureTexId = pressure.read[2];
+  gl.activeTexture(gl.TEXTURE0 + pressureTexId);
+  gl.bindTexture(gl.TEXTURE_2D, pressure.read[0]);
+  gl.uniform1i(clearProgram.uniforms.uTexture, pressureTexId);
+  gl.uniform1f(clearProgram.uniforms.value, config.PRESSURE_DISSIPATION);
+  blit(pressure.write[1]);
+  pressure.swap();
+
+  pressureProgram.bind();
+  gl.uniform2f(pressureProgram.uniforms.texelSize, 1.0 / textureWidth, 1.0 / textureHeight);
+  gl.uniform1i(pressureProgram.uniforms.uDivergence, divergence[2]);
+  pressureTexId = pressure.read[2];
+  gl.uniform1i(pressureProgram.uniforms.uPressure, pressureTexId);
+  gl.activeTexture(gl.TEXTURE0 + pressureTexId);
+  for (let i = 0; i < config.PRESSURE_ITERATIONS; i++) {
+    gl.bindTexture(gl.TEXTURE_2D, pressure.read[0]);
+    blit(pressure.write[1]);
+    pressure.swap();
+  }
+
+  gradienSubtractProgram.bind();
+  gl.uniform2f(gradienSubtractProgram.uniforms.texelSize, 1.0 / textureWidth, 1.0 / textureHeight);
+  gl.uniform1i(gradienSubtractProgram.uniforms.uPressure, pressure.read[2]);
+  gl.uniform1i(gradienSubtractProgram.uniforms.uVelocity, velocity.read[2]);
+  blit(velocity.write[1]);
+  velocity.swap();
+
+  gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
+  displayProgram.bind();
+  gl.uniform1i(displayProgram.uniforms.uTexture, density.read[2]);
+  blit(null);
+
+  requestAnimationFrame(update);
+}
+
+function splat(x, y, dx, dy, color) {
+  splatProgram.bind();
+  gl.uniform1i(splatProgram.uniforms.uTarget, velocity.read[2]);
+  gl.uniform1f(splatProgram.uniforms.aspectRatio, canvas.width / canvas.height);
+  gl.uniform2f(splatProgram.uniforms.point, x / canvas.width, 1.0 - y / canvas.height);
+  gl.uniform3f(splatProgram.uniforms.color, dx, -dy, 1.0);
+  gl.uniform1f(splatProgram.uniforms.radius, config.SPLAT_RADIUS);
+  blit(velocity.write[1]);
+  velocity.swap();
+
+  gl.uniform1i(splatProgram.uniforms.uTarget, density.read[2]);
+  gl.uniform3f(splatProgram.uniforms.color, color[0] * 0.3, color[1] * 0.3, color[2] * 0.3);
+  blit(density.write[1]);
+  density.swap();
+}
+
+function multipleSplats(amount) {
+  for (let i = 0; i < amount; i++) {
+    const color = [Math.random() * 10, Math.random() * 10, Math.random() * 10];
+    const x = canvas.width * Math.random();
+    const y = canvas.height * Math.random();
+    const dx = 1000 * (Math.random() - 0.5);
+    const dy = 1000 * (Math.random() - 0.5);
+    splat(x, y, dx, dy, color);
+  }
+}
+
+function resizeCanvas() {
+  if (canvas.width != canvas.clientWidth || canvas.height != canvas.clientHeight) {
+    canvas.width = canvas.clientWidth;
+    canvas.height = canvas.clientHeight;
+    initFramebuffers();
+  }
+}
+
+canvas.addEventListener('mousemove', e => {
+  pointers[0].moved = pointers[0].down;
+  pointers[0].dx = (e.offsetX - pointers[0].x) * 10.0;
+  pointers[0].dy = (e.offsetY - pointers[0].y) * 10.0;
+  pointers[0].x = e.offsetX;
+  pointers[0].y = e.offsetY;
+});
+
+canvas.addEventListener('touchmove', e => {
+  e.preventDefault();
+  const touches = e.targetTouches;
+  for (let i = 0; i < touches.length; i++) {
+    let pointer = pointers[i];
+    pointer.moved = pointer.down;
+    pointer.dx = (touches[i].pageX - pointer.x) * 10.0;
+    pointer.dy = (touches[i].pageY - pointer.y) * 10.0;
+    pointer.x = touches[i].pageX;
+    pointer.y = touches[i].pageY;
+  }
+}, false);
+
+canvas.addEventListener('mousemove', () => {
+  pointers[0].down = true;
+  pointers[0].color = [Math.random() + 0.2, Math.random() + 0.2, Math.random() + 0.2];
+});
+
+canvas.addEventListener('touchstart', e => {
+  e.preventDefault();
+  const touches = e.targetTouches;
+  for (let i = 0; i < touches.length; i++) {
+    if (i >= pointers.length)
+    pointers.push(new pointerPrototype());
+
+    pointers[i].id = touches[i].identifier;
+    pointers[i].down = true;
+    pointers[i].x = touches[i].pageX;
+    pointers[i].y = touches[i].pageY;
+    pointers[i].color = [Math.random() + 0.2, Math.random() + 0.2, Math.random() + 0.2];
+  }
+});
+
+window.addEventListener('mouseleave', () => {
+  pointers[0].down = false;
+});
+
+window.addEventListener('touchend', e => {
+  const touches = e.changedTouches;
+  for (let i = 0; i < touches.length; i++)
+  for (let j = 0; j < pointers.length; j++)
+  if (touches[i].identifier == pointers[j].id)
+  pointers[j].down = false;
+});
+</script>
+<script src='https://unpkg.com/three@0.146.0/build/three.min.js'></script>
+<script src='https://unpkg.com/three@0.146.0/examples/js/postprocessing/EffectComposer.js'></script>
+<script src='https://unpkg.com/three@0.146.0/examples/js/postprocessing/ShaderPass.js'></script>
+<script src='https://unpkg.com/three@0.146.0/examples/js/shaders/CopyShader.js'></script>
+<script src='https://unpkg.com/three@0.146.0/examples/js/postprocessing/RenderPass.js'></script>
+<script src='https://unpkg.com/three@0.146.0/examples/js/shaders/LuminosityHighPassShader.js'></script>
+<script src='https://unpkg.com/three@0.146.0/examples/js/postprocessing/UnrealBloomPass.js'></script>
+<script src='https://unpkg.com/three@0.146.0/examples/js/objects/Reflector.js'></script>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+<script> const { THREE } = window;
+
+	// https://stackoverflow.com/questions/11381673/detecting-a-mobile-browser
+	function isMobile() {
+		let check = false;
+	
+		// eslint-disable-next-line
+		(function(a){if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(a)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0,4))) check = true;})(navigator.userAgent||navigator.vendor||window.opera);
+	
+		return check;
+	}
+	
+	const IS_MOBILE_DEVICE = isMobile();
+	
+	const FLAGS = Object.freeze({
+		ENABLE_SHADOWS: !IS_MOBILE_DEVICE,
+		ENABLE_BLOOM: !IS_MOBILE_DEVICE,
+		ENABLE_NOISE: !IS_MOBILE_DEVICE,
+	});
+	
+	// https://coolors.co/palette/f72585-b5179e-7209b7-560bad-480ca8-3a0ca3-3f37c9-4361ee-4895ef-4cc9f0
+	const COLOR_PALETTE = Object.freeze({
+		black: 0x010101,
+		white: 0xEEEEEE,
+		color1: 0xF72585,
+		color2: 0xB5179E,
+		color3: 0x7209B7,
+		color4: 0x560BAD,
+		color5: 0x480CA8,
+		color6: 0x3A0CA3,
+		color7: 0x3F37C9,
+		color8: 0x4361EE,
+		color9: 0x4895EF,
+		color10: 0x4CC9F0,
+	});
+	
+	const COLOR_PALETTE_GLSL = Object.freeze({
+		black: 'vec4(0.04, 0.04, 0.04, 1.0)',
+		white: 'vec4(0.933, 0.933, 0.933, 1.0)',
+		color1: 'vec4(0.969, 0.145, 0.522, 1.0)',
+		color2: 'vec4(0.71, 0.09, 0.62, 1.0)',
+		color3: 'vec4(0.447, 0.035, 0.718, 1.0)',
+		color4: 'vec4(0.337, 0.043, 0.678, 1.0)',
+		color5: 'vec4(0.282, 0.047, 0.659, 1.0)',
+		color6: 'vec4(0.227, 0.047, 0.639, 1.0)',
+		color7: 'vec4(0.247, 0.216, 0.788, 1.0)',
+		color8: 'vec4(0.263, 0.38, 0.933, 1.0)',
+		color9: 'vec4(0.282, 0.584, 0.937, 1.0)',
+		color10: 'vec4(0.298, 0.788, 0.941, 1.0)',
+	});
+	
+	class DefaultMaterial extends THREE.MeshStandardMaterial {
+		constructor() {
+			super({
+				color: COLOR_PALETTE.white,
+			});
+		}
+	}
+	
+	class CarMaterial extends THREE.MeshStandardMaterial {
+		constructor() {
+			super({
+				color: COLOR_PALETTE.black,
+			});
+		}
+	}
+	
+	class LightMaterial extends THREE.MeshStandardMaterial {
+		constructor() {
+			super({
+				color: COLOR_PALETTE.color1,
+			});
+		}
+	}
+	
+	class WheelMaterial extends THREE.MeshStandardMaterial {
+		constructor() {
+			super({
+				color: COLOR_PALETTE.black,
+			});
+		}
+	}
+	
+	class MountainMaterial extends THREE.MeshBasicMaterial {
+		constructor() {
+			super({
+				color: COLOR_PALETTE.black,
+			});
+		}
+	}
+	
+	class CustomMaterial extends THREE.MeshStandardMaterial {
+		onBeforeCompile(shader) {
+			// eslint-disable-next-line no-param-reassign
+			shader.uniforms.uTime = { value: 0.0 };
+	
+			// eslint-disable-next-line no-param-reassign
+			shader.vertexShader = shader.vertexShader.replace(
+				'#include <uv_pars_vertex>',
+				`varying vec2 vUv;
+				uniform float uTime;`,
+			);
+	
+			// eslint-disable-next-line no-param-reassign
+			shader.vertexShader = shader.vertexShader.replace(
+				'#include <uv_vertex>',
+				'vUv = uv;',
+			);
+	
+			// eslint-disable-next-line no-param-reassign
+			shader.fragmentShader = shader.fragmentShader.replace(
+				'varying vec3 vViewPosition;',
+				`varying vec3 vViewPosition;
+				varying vec2 vUv;
+				uniform float uTime;`,
+			);
+	
+			this.userData.shader = shader;
+		}
+	}
+	
+	class CustomTransparentMaterial extends CustomMaterial {
+		constructor() {
+			super({
+				transparent: true,
+			});
+		}
+	}
+	
+	class RoadMaterial extends CustomTransparentMaterial {
+		onBeforeCompile(shader) {
+			super.onBeforeCompile(shader);
+	
+			// eslint-disable-next-line no-param-reassign
+			shader.fragmentShader = shader.fragmentShader.replace(
+				// eslint-disable-next-line sonarjs/no-duplicate-string
+				'#include <map_fragment>',
+				`
+				diffuseColor = ${COLOR_PALETTE_GLSL.black};
+	
+				float width = 0.06;
+	
+				bool isInCenter = abs(0.5 - vUv.x) < (0.01 + width / 2.0);
+				bool isInRoad = abs(0.5 - vUv.x) < (width / 2.0);
+	
+				if (isInCenter) {
+					diffuseColor = ${COLOR_PALETTE_GLSL.color9};
+				}
+	
+				if (isInRoad) {
+					diffuseColor = ${COLOR_PALETTE_GLSL.black};
+	
+					diffuseColor.a = 0.8;
+	
+					bool isInLine = (abs(0.5 - vUv.x + width / 6.0) < 0.0003);
+					bool isInDashedLine = (abs(0.5 - vUv.x - width / 6.0) < 0.0003)
+						&& (sin(100.0 * vUv.y - 10.0 * uTime) > 0.3);
+	
+					if (isInLine || isInDashedLine) {
+						diffuseColor = ${COLOR_PALETTE_GLSL.color10};
+					}
+				}
+				`,
+			);
+	
+			this.userData.shader = shader;
+		}
+	}
+	
+	class SunMaterial extends CustomTransparentMaterial {
+		onBeforeCompile(shader) {
+			super.onBeforeCompile(shader);
+	
+			// eslint-disable-next-line no-param-reassign
+			shader.fragmentShader = shader.fragmentShader.replace(
+				'#include <map_fragment>',
+				`
+				diffuseColor = vec4(0.0);
+	
+				bool isInSun = distance(vUv.xy, vec2(0.5, 0.5)) < 0.5;
+	
+				if (isInSun) {
+					diffuseColor = ${COLOR_PALETTE_GLSL.color1};
+	
+					float delta = 0.2 * (1.0 - vUv.y);
+	
+					diffuseColor += vec4(delta, delta, 0.0, 0.0);
+	
+					bool isInLine = sin(100.0 * vUv.y) * vUv.y > 0.3;
+	
+					if (isInLine) {
+						diffuseColor = ${COLOR_PALETTE_GLSL.color3};
+					}
+				}
+				`,
+			);
+	
+			this.userData.shader = shader;
+		}
+	}
+	
+	class BuildingMaterialA extends CustomMaterial {
+		onBeforeCompile(shader) {
+			super.onBeforeCompile(shader);
+	
+			// eslint-disable-next-line no-param-reassign
+			shader.fragmentShader = shader.fragmentShader.replace(
+				'#include <map_fragment>',
+				`
+				diffuseColor = ${COLOR_PALETTE_GLSL.black};
+	
+				bool isInWindow = vUv.y > 0.09
+					&& (sin(31.415 * (vUv.x - 0.05)) > 0.5)
+					&& (sin(100.0 * vUv.y) > 0.5);
+	
+				if (isInWindow) {
+					diffuseColor = ${COLOR_PALETTE_GLSL.color7};
+	
+					if (vUv.x > 0.4 && vUv.x < 0.6) {
+						diffuseColor = ${COLOR_PALETTE_GLSL.color10};
+					}
+				}
+				`,
+			);
+	
+			this.userData.shader = shader;
+		}
+	}
+	
+	class BuildingMaterialB extends CustomMaterial {
+		onBeforeCompile(shader) {
+			super.onBeforeCompile(shader);
+	
+			// eslint-disable-next-line no-param-reassign
+			shader.fragmentShader = shader.fragmentShader.replace(
+				'#include <map_fragment>',
+				`
+				diffuseColor = ${COLOR_PALETTE_GLSL.black};
+	
+				bool isInWindow = vUv.y > 0.1
+					&& vUv.y < 0.5
+					&& (sin(50.0 * 3.1415 * (vUv.x - 0.05)) > -0.8)
+					&& (sin(50.0 * vUv.y) > 0.5);
+	
+				if (isInWindow) {
+					diffuseColor = ${COLOR_PALETTE_GLSL.color1};
+	
+					if (vUv.y < 0.3) {
+						diffuseColor = ${COLOR_PALETTE_GLSL.color4};
+					}
+				}
+				`,
+			);
+	
+			this.userData.shader = shader;
+		}
+	}
+	
+	class BuildingMaterialC extends CustomMaterial {
+		onBeforeCompile(shader) {
+			super.onBeforeCompile(shader);
+	
+			// eslint-disable-next-line no-param-reassign
+			shader.fragmentShader = shader.fragmentShader.replace(
+				'#include <map_fragment>',
+				`
+				diffuseColor = ${COLOR_PALETTE_GLSL.black};
+	
+				bool isInWindow = vUv.y > 0.5
+					&& vUv.y < 0.8
+					&& (sin(5.0 * 3.1415 * (vUv.x - 0.05)) > -0.8)
+					&& (sin(50.0 * vUv.y) > 0.5);
+	
+				if (isInWindow) {
+					diffuseColor = ${COLOR_PALETTE_GLSL.color9};
+				}
+				`,
+			);
+	
+			this.userData.shader = shader;
+		}
+	}
+	
+	class BuildingMaterialD extends CustomMaterial {
+		onBeforeCompile(shader) {
+			super.onBeforeCompile(shader);
+	
+			// eslint-disable-next-line no-param-reassign
+			shader.fragmentShader = shader.fragmentShader.replace(
+				'#include <map_fragment>',
+				`
+				diffuseColor = ${COLOR_PALETTE_GLSL.black};
+	
+				bool isInWindow = vUv.y > 0.1
+					&& (sin(50.0 * vUv.y) > -0.8);
+	
+				if (isInWindow) {
+					diffuseColor = ${COLOR_PALETTE_GLSL.color5};
+				}
+				`,
+			);
+	
+			this.userData.shader = shader;
+		}
+	}
+	
+	class MaterialsLibrary {
+		static default = new DefaultMaterial();
+		static road = new RoadMaterial();
+		static sun = new SunMaterial();
+		static mountain = new MountainMaterial();
+		static car = new CarMaterial();
+		static wheel = new WheelMaterial();
+		static light = new LightMaterial();
+		static buildingA = new BuildingMaterialA();
+		static buildingB = new BuildingMaterialB();
+		static buildingC = new BuildingMaterialC();
+		static buildingD = new BuildingMaterialD();
+	}
+	
+	class Road extends THREE.Group {
+		constructor() {
+			super();
+	
+			const geometry = new THREE.PlaneGeometry();
+			const material = MaterialsLibrary.road;
+			const road = new THREE.Mesh(geometry, material);
+	
+			road.scale.set(200, 200, 1);
+			road.rotation.set(-Math.PI / 2, 0, 0);
+	
+			if (FLAGS.ENABLE_SHADOWS) {
+				road.receiveShadow = true;
+			}
+	
+			this.add(road);
+	
+			const reflector = new THREE.Reflector(
+				new THREE.PlaneGeometry(10, 10),
+				{
+					color: new THREE.Color(0x7f7f7f),
+					textureWidth: window.innerWidth * window.devicePixelRatio,
+					textureHeight: window.innerHeight * window.devicePixelRatio,
+				},
+			);
+	
+			reflector.position.set(0, -0.1, 0);
+			reflector.scale.set(200, 200, 1);
+			reflector.rotation.set(-Math.PI / 2, 0, 0);
+	
+			this.add(reflector);
+		}
+	}
+	
+	class Sun extends THREE.Group {
+		constructor() {
+			super();
+	
+			const geometry = new THREE.PlaneGeometry();
+			const material = MaterialsLibrary.sun;
+			const sun = new THREE.Mesh(geometry, material);
+	
+			sun.scale.set(50, 50, 1);
+	
+			this.add(sun);
+		}
+	}
+	
+	class Mountain extends THREE.Group {
+		constructor() {
+			super();
+	
+			const material = MaterialsLibrary.mountain;
+			const shape = new THREE.Shape();
+	
+			shape.moveTo(0, 0);
+			shape.lineTo(100, 0);
+			shape.lineTo(100, 50);
+			shape.lineTo(50, 10);
+			shape.lineTo(20, 15);
+			shape.lineTo(15, 5);
+			shape.lineTo(10, 10);
+			shape.lineTo(0, 0);
+			shape.lineTo(-5, 3);
+			shape.lineTo(-10, 10);
+			shape.lineTo(-12, 8);
+			shape.lineTo(-100, 50);
+			shape.lineTo(-100, 0);
+			shape.lineTo(0, 0);
+	
+			const geometry = new THREE.ExtrudeGeometry(shape);
+			const mountain = new THREE.Mesh(geometry, material);
+	
+			this.add(mountain);
+		}
+	}
+	
+	class Car extends THREE.Group {
+		constructor() {
+			super();
+	
+			{
+				const material = MaterialsLibrary.car;
+				const shape = new THREE.Shape();
+	
+				shape.moveTo(0, 0);
+				shape.lineTo(4, 0);
+				shape.lineTo(3.8, 0.3);
+				shape.lineTo(-0.1, 0.7);
+				shape.lineTo(0, 0);
+	
+				const geometry = new THREE.ExtrudeGeometry(shape, {
+					depth: 1.5,
+					bevelThickness: 0.2,
+				});
+	
+				const body = new THREE.Mesh(geometry, material);
+	
+				body.position.set(0, 0.3, 0);
+	
+				this.add(body);
+			}
+	
+			{
+				const material = MaterialsLibrary.car;
+				const geometry = new THREE.CylinderGeometry(0.6, 1.2, 0.5, 4);
+				const roof = new THREE.Mesh(geometry, material);
+	
+				roof.position.set(1.5, 1, 0.8);
+				roof.rotation.set(0, Math.PI / 4, 0);
+	
+				this.add(roof);
+			}
+	
+			{
+				const material = MaterialsLibrary.light;
+				const geometry = new THREE.CylinderGeometry(0.1, 0.1, 0.1, 12);
+				const light1 = new THREE.Mesh(geometry, material);
+	
+				light1.position.set(-0.2, 0.9, 0);
+				light1.rotation.set(0, 0, Math.PI / 2);
+	
+				this.add(light1);
+	
+				const light2 = new THREE.Mesh(geometry, material);
+	
+				light2.position.set(-0.2, 0.9, 0.3);
+				light2.rotation.set(0, 0, Math.PI / 2);
+	
+				this.add(light2);
+	
+				const light3 = new THREE.Mesh(geometry, material);
+	
+				light3.position.set(-0.2, 0.9, 1.2);
+				light3.rotation.set(0, 0, Math.PI / 2);
+	
+				this.add(light3);
+	
+				const light4 = new THREE.Mesh(geometry, material);
+	
+				light4.position.set(-0.2, 0.9, 1.5);
+				light4.rotation.set(0, 0, Math.PI / 2);
+	
+				this.add(light4);
+			}
+	
+			{
+				const material = MaterialsLibrary.wheel;
+	
+				const geometry = new THREE.CylinderGeometry(1, 1, 1, 12);
+				const wheel1 = new THREE.Mesh(geometry, material);
+	
+				wheel1.scale.set(0.33, 2, 0.33);
+				wheel1.position.set(3, 0.33, 0.75);
+				wheel1.rotation.set(Math.PI / 2, 0, 0);
+	
+				this.add(wheel1);
+	
+				const wheel2 = new THREE.Mesh(geometry, material);
+	
+				wheel2.scale.set(0.33, 2, 0.33);
+				wheel2.position.set(0.7, 0.33, 0.75);
+				wheel2.rotation.set(Math.PI / 2, 0, 0);
+	
+				this.add(wheel2);
+			}
+		}
+	}
+	
+	class BuildingA extends THREE.Group {
+		constructor() {
+			super();
+	
+			const material = MaterialsLibrary.buildingA;
+			const geometry = new THREE.BoxGeometry();
+			const building = new THREE.Mesh(geometry, material);
+	
+			building.scale.set(10, 15, 10);
+			building.position.set(0, -3, 0);
+	
+			if (FLAGS.ENABLE_SHADOWS) {
+				building.castShadow = true;
+			}
+	
+			this.add(building);
+	
+			const roofGeometry = new THREE.ConeGeometry(5, 15, 7);
+			const roof = new THREE.Mesh(roofGeometry, material);
+	
+			roof.position.set(0, 5, 0);
+	
+			this.add(roof);
+		}
+	}
+	
+	class BuildingB extends THREE.Group {
+		constructor() {
+			super();
+	
+			const material = MaterialsLibrary.buildingB;
+			const geometry = new THREE.CylinderGeometry();
+			const building = new THREE.Mesh(geometry, material);
+	
+			building.scale.set(5, 15, 5);
+			building.position.set(0, -3, 0);
+	
+			if (FLAGS.ENABLE_SHADOWS) {
+				building.castShadow = true;
+			}
+	
+			this.add(building);
+	
+			const roofGeometry = new THREE.SphereGeometry(7);
+			const roof = new THREE.Mesh(roofGeometry, material);
+	
+			roof.position.set(0, 2, 0);
+			roof.rotation.set(0, 0.3, 0);
+	
+			this.add(roof);
+		}
+	}
+	
+	class BuildingC extends THREE.Group {
+		constructor() {
+			super();
+	
+			const material = MaterialsLibrary.buildingC;
+			const geometry = new THREE.BoxGeometry();
+			const building = new THREE.Mesh(geometry, material);
+	
+			building.scale.set(5, 5, 5);
+			building.position.set(0, -8, 0);
+	
+			if (FLAGS.ENABLE_SHADOWS) {
+				building.castShadow = true;
+			}
+	
+			this.add(building);
+		}
+	}
+	
+	class BuildingD extends THREE.Group {
+		constructor() {
+			super();
+	
+			const material = MaterialsLibrary.buildingD;
+			const geometry = new THREE.ConeGeometry(1, 1, 3);
+			const building = new THREE.Mesh(geometry, material);
+	
+			building.scale.set(5, 20, 5);
+			building.rotation.set(0, 1, 0);
+	
+			if (FLAGS.ENABLE_SHADOWS) {
+				building.castShadow = true;
+			}
+	
+			this.add(building);
+		}
+	}
+	
+	class City extends THREE.Group {
+		static #getRandomBuilding() {
+			const choice = Math.random();
+	
+			if (choice < 0.2) {
+				return new BuildingA();
+			}
+	
+			if (choice < 0.3) {
+				return new BuildingB();
+			}
+	
+			if (choice < 0.9) {
+				return new BuildingC();
+			}
+	
+			return new BuildingD();
+		}
+	
+		constructor() {
+			super();
+	
+			for (let z = 0; z < 200; z += 20) {
+				for (let x = 70; x >= 10; x -= 20) {
+					this.#initBuilding(x, z);
+				}
+	
+				for (let x = 120; x <= 180; x += 20) {
+					this.#initBuilding(x, z);
+				}
+			}
+		}
+	
+		#initBuilding(x, z) {
+			const building = City.#getRandomBuilding();
+	
+			building.position.set(x, 20 / 2, z);
+	
+			this.add(building);
+		}
+	
+		update() {
+			this.children.forEach((building) => {
+				const { x, z } = building.position;
+	
+				let newZ = z - 0.5;
+	
+				if (newZ < 0) {
+					newZ = 200;
+				}
+	
+				const y = newZ <= 150 ? 10 : (10 + 20 * ((150 - newZ) / 50));
+	
+				building.position.set(x, y, newZ);
+			});
+		}
+	}
+	
+	class Stars extends THREE.Group {
+		constructor() {
+			super();
+	
+			const geometry = new THREE.SphereGeometry();
+			const material = MaterialsLibrary.light;
+	
+			for (let x = -300; x < 300; x += 30) {
+				for (let y = 0; y < 300; y += 30) {
+					const star = new THREE.Mesh(geometry, material);
+	
+					const dx = 25 * Math.random();
+					const dy = 25 * Math.random();
+					const s = Math.random();
+	
+					star.scale.set(s, s, s);
+					star.position.set(x + dx, y + dy, 0);
+	
+					this.add(star);
+				}
+			}
+		}
+	}
+	
+	class ObjectsLibrary {
+		static road = new Road();
+		static sun = new Sun();
+		static mountain = new Mountain();
+		static car = new Car();
+		static city = new City();
+		static stars = new Stars();
+	}
+	
+	class SandboxWorld extends THREE.Group {
+		#savedObjects;
+	
+		constructor() {
+			super();
+	
+			this.#initObjects();
+			this.#initLights();
+		}
+	
+		#initObjects() {
+			const { road, car, sun, city, mountain, stars } = ObjectsLibrary;
+	
+			road.position.set(0, 0, 100);
+	
+			sun.position.set(0, 10, 200);
+			sun.rotation.set(-Math.PI, 0, 0);
+	
+			city.position.set(-100, 0, 0);
+	
+			mountain.position.set(0, 0, 200);
+	
+			car.position.set(0.7, 0, 10);
+			car.rotation.set(0, -Math.PI / 2, 0);
+	
+			stars.position.set(0, 0, 250);
+	
+			this.add(road);
+			this.add(sun);
+			this.add(car);
+			this.add(city);
+			this.add(mountain);
+			this.add(stars);
+	
+			this.#savedObjects = { car, city };
+		}
+	
+		#initLights() {
+			const ambient = new THREE.AmbientLight({
+				color: COLOR_PALETTE.color3,
+				intensity: 0.1,
+			});
+	
+			this.add(ambient);
+	
+			const point = new THREE.PointLight({
+				color: COLOR_PALETTE.color1,
+				intensity: 5,
+				decay: 0.5,
+				distance: 300,
+			});
+	
+			point.position.set(0, 30, 180);
+	
+			if (FLAGS.ENABLE_SHADOWS) {
+				point.castShadow = true;
+			}
+	
+			this.add(point);
+		}
+	
+		update() {
+			const t = performance.now() / 1000;
+	
+			this.#savedObjects.car.position.set(0.7 + 0.2 * Math.sin(t), 0, 10);
+	
+			this.#savedObjects.city.update();
+		}
+	}
+	
+	class FullScreen3DExample {
+		static CSS_ROOT = 'full-screen-3d-example';
+		static CSS_ROOT_LOADED_VARIANT = '-loaded';
+	
+		#root;
+		#frameRequestId;
+		#scene;
+		#world;
+		#camera;
+		#cameraData;
+		#renderer;
+		#composer;
+	
+		constructor(root) {
+			this.#root = root;
+			this.#root.classList.add(FullScreen3DExample.CSS_ROOT);
+			this.#initScene();
+			this.#initObjects();
+			this.#initCamera();
+			this.#initRenderer();
+			this.#initComposer();
+			this.#initEventListeners();
+			this.#onWindowResize();
+			this.#root.classList.add(FullScreen3DExample.CSS_ROOT_LOADED_VARIANT);
+			this.#render();
+		}
+	
+		#initScene() {
+			this.#scene = new THREE.Scene();
+		}
+	
+		#initObjects() {
+			this.#world = new SandboxWorld();
+	
+			this.#scene.add(this.#world);
+		}
+	
+		#initCamera() {
+			const fov = 45;
+			const aspect = window.innerWidth / window.innerHeight;
+			const near = 1;
+			const far = 1000;
+	
+			this.#camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
+			this.#camera.position.set(0, 2, 1);
+			this.#camera.lookAt(0, 0, 200);
+			this.#camera.updateProjectionMatrix();
+	
+			this.#cameraData = {
+				positionX: 0,
+				positionY: 2,
+			};
+		}
+	
+		#initRenderer() {
+			const clearColor = COLOR_PALETTE.black;
+			const clearColorAlpha = 1;
+	
+			this.#renderer = new THREE.WebGLRenderer({
+				alpha: true,
+				logarithmicDepthBuffer: true,
+			});
+			this.#renderer.setClearColor(clearColor, clearColorAlpha);
+			this.#renderer.setPixelRatio(window.devicePixelRatio);
+	
+			if (FLAGS.ENABLE_SHADOWS) {
+				this.#renderer.shadowMap.enabled = true;
+				this.#renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+			}
+	
+			this.#root.appendChild(this.#renderer.domElement);
+		}
+	
+		#initComposer() {
+			const width = window.innerWidth;
+			const height = window.innerHeight;
+	
+			this.#composer = new THREE.EffectComposer(this.#renderer);
+			this.#composer.setSize(width, height);
+			this.#initRenderPass();
+	
+			if (FLAGS.ENABLE_BLOOM) {
+				this.#initBloomPass();
+			}
+	
+			if (FLAGS.ENABLE_NOISE) {
+				this.#initShaderPass();
+			}
+		}
+	
+		#initRenderPass() {
+			const renderPass = new THREE.RenderPass(this.#scene, this.#camera);
+	
+			this.#composer.addPass(renderPass);
+		}
+	
+		#initBloomPass() {
+			const width = window.innerWidth;
+			const height = window.innerHeight;
+			const resolution = new THREE.Vector2(width, height);
+			const strength = 0.8;
+			const radius = 0.5;
+			const threshold = 0.1;
+	
+			const bloomPass = new THREE.UnrealBloomPass(
+				resolution,
+				strength,
+				radius,
+				threshold,
+			);
+	
+			this.#composer.addPass(bloomPass);
+		}
+	
+		#initShaderPass() {
+			const pass = new THREE.ShaderPass({
+				uniforms: {
+					tDiffuse: {
+						type: 't',
+						value: null,
+					},
+					uTime: {
+						value: 1,
+					},
+				},
+				vertexShader: `
+					varying vec2 vUv;
+	
+					void main() {
+						vUv = uv;
+	
+						gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+					}`,
+				fragmentShader: `
+					uniform float uTime;
+					uniform sampler2D tDiffuse;
+	
+					varying vec2 vUv;
+	
+					float rand(vec2 seed);
+					float noise(vec2 position);
+	
+					void main() {
+						vec4 color = texture2D(tDiffuse, vUv);
+	
+						float d = 0.05 * noise(50.0 * (100.0 * uTime + vec2(vUv.x, 20.0 * vUv.y)));
+	
+						color = vec4(color.r - d, color.g - d, color.b - d, 1.0);
+	
+						gl_FragColor = color;
+					}
+	
+					float rand(vec2 seed) {
+						return fract(sin(dot(seed, vec2(12.9898,78.233))) * 43758.5453123);
+					}
+	
+					float noise(vec2 position) {
+						vec2 blockPosition = floor(position);
+	
+						float topLeftValue     = rand(blockPosition);
+						float topRightValue    = rand(blockPosition + vec2(1.0, 0.0));
+						float bottomLeftValue  = rand(blockPosition + vec2(0.0, 1.0));
+						float bottomRightValue = rand(blockPosition + vec2(1.0, 1.0));
+	
+						vec2 computedValue = smoothstep(0.0, 1.0, fract(position));
+	
+						return mix(topLeftValue, topRightValue, computedValue.x)
+							+ (bottomLeftValue  - topLeftValue)  * computedValue.y * (1.0 - computedValue.x)
+							+ (bottomRightValue - topRightValue) * computedValue.x * computedValue.y;
+					}
+				`,
+			});
+	
+			pass.renderToScreen = true;
+	
+			this.#composer.addPass(pass);
+		}
+	
+		#initEventListeners() {
+			window.addEventListener('resize', this.#onWindowResize.bind(this));
+			document.addEventListener('mousemove', this.#onMouseMove.bind(this));
+		}
+	
+		#onWindowResize() {
+			const width = window.innerWidth;
+			const height = window.innerHeight;
+	
+			this.#camera.aspect = width / height;
+			this.#camera.updateProjectionMatrix();
+			this.#renderer.setSize(width, height);
+			this.#composer.setSize(width, height);
+		}
+	
+		#onMouseMove(e) {
+			this.#cameraData.positionX = (5 * ((window.innerWidth / 2) - e.clientX))
+				/ window.innerWidth;
+			this.#cameraData.positionY = 2 + (0.5 * ((window.innerHeight / 2) - e.clientY))
+				/ window.innerHeight;
+		}
+	
+		#updateEverything() {
+			const t = performance.now() / 1000;
+	
+			this.#world.update();
+	
+			this.#scene.traverse((child) => {
+				if (child.isMesh) {
+					const { shader } = child.material.userData;
+	
+					if (shader) {
+						shader.uniforms.uTime.value = t;
+					}
+				}
+			});
+	
+			this.#composer.passes.forEach((pass) => {
+				if (pass instanceof THREE.ShaderPass) {
+					// eslint-disable-next-line no-param-reassign
+					pass.uniforms.uTime.value = (t) % 10;
+				}
+			});
+	
+			{
+				const x = this.#cameraData.positionX
+					+ 0.3 * (Math.sin(0.1 * t) + Math.sin(0.05 * t));
+				const y = this.#cameraData.positionY
+					+ 0.3 * Math.cos(0.3 * t);
+	
+				this.#camera.position.set(x, y, 1);
+				this.#camera.updateProjectionMatrix();
+			}
+		}
+	
+		#render() {
+			this.#updateEverything();
+	
+			this.#composer.render(this.#scene, this.#camera);
+		}
+	
+		start() {
+			this.#render();
+	
+			this.#frameRequestId = requestAnimationFrame(this.start.bind(this));
+		}
+	
+		stop() {
+			cancelAnimationFrame(this.#frameRequestId);
+		}
+	}
+	
+	function main() {
+		const root = document.getElementById('root');
+		const example = new FullScreen3DExample(root);
+	
+		example.start();
+	}
+	
+	document.addEventListener('DOMContentLoaded', main);
+	
+	</script>
+	</body>
+</html>
