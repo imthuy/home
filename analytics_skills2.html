@@ -42,6 +42,7 @@
 			overflow-x: hidden;
 			perspective: 10px;
 		}
+		
 
 		header {
 			transform-style: preserve-3d;
@@ -154,7 +155,14 @@
 			position: absolute;
 			transform-origin: center bottom;
 			z-index: -1;
-		}
+			animation: rotate 10s linear infinite;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(300deg); }
+        }
+
 
 		section strong {
 			color: var(--color_light);
@@ -315,7 +323,7 @@
 			<!-- Main title (a parallax element as well) -->
 			<h1><span style="display: block; text-align: center;" data-paralax="7">👩‍🚀🚀🌌</span>Which Analytics Skills Are in High Demand Today?</h1>
 		  </header>
-	  
+
 		  <!-- Story section -->
 		  <section class="story">
 			<div class="inner">
