@@ -8,6 +8,51 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+h3::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px; /* Adjust the height of the wave */
+  background: linear-gradient(135deg, #ff00a6, #00e0ff); /* Adjust colors as needed */
+  animation: wave 2s linear infinite;
+  transform-origin: center bottom;
+}
+
+@keyframes wave {
+  0%, 100% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(1.5); /* Adjust the wave amplitude */
+  }
+}
+
+			#slider {
+			  display: flex;
+			  overflow: hidden;
+			}
+		  
+			#slider span {
+			  display: flex;
+			}
+		  
+		#slider img {
+			  width: 7vw;
+			  height: 7vh;
+			  border-radius: 30%;
+			  margin: 10px;
+			}
+		  </style>
 	</head>
 	<body style="background-repeat: repeat; background-image: url('images/bg.gif');" class="is-preload">
 		<div class="preloader">
@@ -78,11 +123,14 @@
 								<li>Award: UEH Academic Encouragement Scholarship</li>
 								</ul>								<br>
 								<h3>Work Experience</h3>
-								
+								<p></p>
+								<header class="major" >
+									<span class="date">May 2022 - Present</span>
+								</header>
+
 								<a href="https://yeah1digital.com/"><img style="float: right;  margin-top: 1%; margin-left: 1%;" src="images/y1d.png" width="20%" /></a>
 								<h4 style="margin: 0 0 0 0; font-size: larger; text-align: left;" class="rainbow-word">Operations leader • Yeah1 EDigital JSC, Vietnam</h4>
-								<span>May 2022 - Present</span>
-								<p></p>
+<br><br>
 								<style>
 									h5 {
 										margin-top: 0;
@@ -108,10 +156,18 @@
 									  <li>Efficiently multitasked, supporting VN-EL translations for marketing projects (Netflix, THP, etc.) and various materials.</li>
 									</ul>
 								<h5>Relationship Building</h5>
-									<ul>
-										<li>Key clients: VTVCAB, Paramount, Media I.M., Roi Visual, JSBC, HUACE, Dailymotion, METUB, etc.</li>
-									</ul>
-								<h5>Reference</h5>
+								<div id="slider">
+									<span>
+									  <a href="https://www.vtvcab.vn/"><img src="https://seeklogo.com/images/V/vtvcab-logo-556E4450CC-seeklogo.com.png" alt="VTVcab" margin="10vw"/></a>	  
+									  <a href="https://www.paramount.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Paramount_Pictures_2022_%28Blue%29.svg" alt="Paramount" margin="10vw" /></a>
+									  <a href="https://roivisual.com/"><img src="https://play-lh.googleusercontent.com/_PdgMn1QXNtcDgRKTzREkK8ZFsiNMtlS3eh4pP02AVC2ql4VmVPGFxEhrdo3cJIimd0" alt="ROI Visual" margin="10vw"/></a>
+									  <a href="http://www.jsbc.com/"><img src="https://www.monpetitforfait.com/comparateur-box-internet/wp-content/uploads/2020/05/regarder-jiangsu-tv.png" alt="Jiangsu TV" margin="10vw"/></a>
+									  <a href="https://www.dailymotion.com/vn"><img src="https://cdn.icon-icons.com/icons2/2429/PNG/512/dailymotion_logo_icon_147302.png" alt="Dailymotion" margin="10vw"/></a>
+									  <a href="https://metub.net/"><img src="https://metub.net/metub.png" alt="Metub" margin="10vw"/></a>
+
+									</span>
+								</div>	
+								 <h5>Reference</h5>
 								<p>Le Hai Duy (Mr.)&ensp;•&ensp;
 									Optimization Director&ensp;•&ensp;Yeah1 EDigital&ensp;•&ensp;  
 									<i class="icons alt actions">
@@ -120,24 +176,13 @@
 										  <a id="email-link-1" href="mailto:duy.lh@yeah1.vn" style="color: #0088cc;">duy.lh@yeah1.vn</a>
 										</span>
 									</i>
-									<script>
-										function toggleEmail(id) {
-										  var emailContainer = document.getElementById("email-container-" + id);
-										  var emailLink = document.getElementById("email-link-" + id);
-										  
-										  if (emailContainer.style.display === "none") {
-											emailContainer.style.display = "inline";
-										  } else {
-											emailContainer.style.display = "none";
-											emailLink.blur(); 
-										  }
-										}
-									</script>
-								</p>
-								<br>
+								</p> 
+<br>
+								<header class="major">
+									<span class="date">Aug 2020 - Apr 2022</span>
+								</header>
 								<a href="https://yeah1group.com/"><img style="float: right;  margin-top: 1%; margin-left: 1%;" src="images/y1g.png" width="20%" /></a>
 								<h4 style="margin: 0 0 0 0; font-size: large; text-align: left;" class="rainbow-word">PARTNERSHIP specialist • Yeah1 Group, Vietnam</h4>
-								<span>May 2022 - Present</span>
 								<p></p>
 
 								<h5>Business Acumen</h5>
