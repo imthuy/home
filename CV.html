@@ -228,8 +228,17 @@ h3::before {
 											  		<a id="email-link-2" href="mailto:duy.hpt@yeah1.vn" style="color: #004d74;">duy.hpt@yeah1.vn</a>
 												</span>
 											</i>
-										
-										</p>
+									</p>
+									<script>
+										function toggleEmail(emailNumber) {
+										  var emailContainer = document.getElementById('email-container-' + emailNumber);
+										  if (emailContainer.style.display === 'none') {
+											emailContainer.style.display = 'inline';
+										  } else {
+											emailContainer.style.display = 'none';
+										  }
+										}
+									  </script>								  
 									<br />
 								<h3>certificates</h3>
 								<style>
