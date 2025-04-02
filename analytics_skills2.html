@@ -40,7 +40,7 @@
 			background: var(--color_dark);
 			overflow-y: auto;
 			overflow-x: hidden;
-			perspective: 10px;
+			perspective: 9px;
 		}
 		
 
@@ -301,6 +301,44 @@
 				font-size: 1.1rem;
 			}
 		}
+		
+		</style>
+		<style>
+			.animated-header {
+				position: relative;
+			}
+	
+			.glitch {
+				font-size: 124px;
+				font-family: 'Pixelify Sans', sans-serif;
+				background-image: linear-gradient(#f0a, #f05);
+				-webkit-background-clip: text;
+				color: transparent;
+				position: relative;
+				display: inline-block;
+			}
+	
+			.glitch::after {
+				content: 'CODEPEN';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: #222;
+				color: transparent;
+				clip: rect(0, 900px, 0, 0);
+				animation: glitch 3s infinite alternate-reverse;
+				z-index: 22;
+			}
+	
+			@keyframes glitch {
+				0% { clip: rect(10px, 9999px, 80px, 0); left: -2px; }
+				25% { clip: rect(30px, 9999px, 60px, 0); left: 2px; }
+				50% { clip: rect(50px, 9999px, 100px, 0); left: -2px; }
+				75% { clip: rect(20px, 9999px, 90px, 0); left: 2px; }
+				100% { clip: rect(40px, 9999px, 70px, 0); left: -2px; }
+			}
 		</style>
 	
 	</head>
@@ -312,18 +350,11 @@
 		<article class="parallax-wrapper">
 	  
 		  <!-- Header section -->
-		  <header>
-			<!-- Parallax elements -->
-			<img src="https://svgshare.com/i/r3R.svg" class="parallax-el" data-paralax="1"/>
-			<img src="https://svgshare.com/i/r1y.svg" class="parallax-el" data-paralax="2"/>
-			<img src="https://svgshare.com/i/r3a.svg" class="parallax-el" data-paralax="3"/>
-			<img src="https://svgshare.com/i/r1x.svg" class="parallax-el" data-paralax="4"/>
-			<img src="https://svgshare.com/i/r3Q.svg" class="parallax-el" data-paralax="5"/>
-			<img src="https://svgshare.com/i/uV1.svg" class="parallax-el" data-paralax="6"/>
-			<!-- Main title (a parallax element as well) -->
+		  <header class="animated-header">
 			<h1><span style="display: block; text-align: center;" data-paralax="7">👩‍🚀🚀🌌</span>Which Analytics Skills Are in High Demand Today?</h1>
 		  </header>
-
+		  
+		  
 		  <!-- Story section -->
 		  <section class="story">
 			<div class="inner">
